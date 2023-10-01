@@ -1,7 +1,7 @@
 doxygen Doxyfile
 
-doxysphinx build ./ ./build_sphinx/html ./Doxyfile
+doxysphinx build ./ ./website ./Doxyfile
 
-sphinx-build -M html ./ ./build_sphinx
+sphinx-build -b html ./ ./website
 
-cp -r ./build_sphinx/html/* ./website
+#cp -r ./build_sphinx/html/* ./website
