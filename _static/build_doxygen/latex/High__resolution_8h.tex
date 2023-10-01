@@ -1,0 +1,38 @@
+\hypertarget{High__resolution_8h}{}\doxysection{/media/monal/main/code/amrsolver1/src/rhs/\+High\+\_\+resolution.h File Reference}
+\label{High__resolution_8h}\index{/media/monal/main/code/amrsolver1/src/rhs/High\_resolution.h@{/media/monal/main/code/amrsolver1/src/rhs/High\_resolution.h}}
+{\ttfamily \#include $<$CNS.\+h$>$}\newline
+{\ttfamily \#include $<$AMRe\+X\+\_\+\+FArray\+Box.\+H$>$}\newline
+Include dependency graph for High\+\_\+resolution.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{High__resolution_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{High__resolution_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceHiRes}{Hi\+Res}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceHiRes_ae9a9b4ba4f4622937d36b68aacd48b14}{Hi\+Res\+::cons2eulerflux}} (int i, int j, int k, auto const \&cons, auto const \&fx, auto const \&fy, auto const \&fz, const PROB\+::\+Prob\+Closures \&closures)
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceHiRes_a24ae7264feab2ea771ba1aa5bd3dcaf5}{Hi\+Res\+::cons2eulerflux\+\_\+lambda}} (int i, int j, int k, auto const \&cons, auto const \&fx, auto const \&fy, auto const \&fz, auto const \&lambda, const PROB\+::\+Prob\+Closures \&closures)
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE Real \mbox{\hyperlink{namespaceHiRes_a3c47fdfaf892abc0232428716edf6964}{Hi\+Res\+::weno5js}} (const Gpu\+Array$<$ Real, 5 $>$ \&s)
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceHiRes_a2da5365fe741884b8c6e8734831a0c5b}{Hi\+Res\+::numericalflux\+\_\+globallaxsplit}} (int i, int j, int k, int n, const auto \&cons, const auto \&pfx, const auto \&pfy, const auto \&pfz, const auto \&lambda, const auto \&nfx, const auto \&nfy, const auto \&nfz)
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceHiRes_ad0c0e48d1046026d107dc94f06d1db60}{Hi\+Res\+::numericalflux}} (int i, int j, int k, int n, const auto \&pfx, const auto \&pfy, const auto \&pfz, const auto \&nfx, const auto \&nfy, const auto \&nfz)
+\item 
+AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceHiRes_a9acde555b29be67a5090961193700570}{Hi\+Res\+::\+Flux\+WENO}} (Multi\+Fab \&statemf, Multi\+Fab \&primsmf, Array$<$ Multi\+Fab, AMREX\+\_\+\+SPACEDIM $>$ \&numflxmf)
+\end{DoxyCompactItemize}

@@ -1,0 +1,50 @@
+\hypertarget{IBM_8cpp}{}\doxysection{/media/monal/main/code/amrsolver1/src/ibm/\+IBM.cpp File Reference}
+\label{IBM_8cpp}\index{/media/monal/main/code/amrsolver1/src/ibm/IBM.cpp@{/media/monal/main/code/amrsolver1/src/ibm/IBM.cpp}}
+{\ttfamily \#include $<$IBM.\+h$>$}\newline
+{\ttfamily \#include $<$CGAL/\+Side\+\_\+of\+\_\+triangle\+\_\+mesh.\+h$>$}\newline
+{\ttfamily \#include $<$AMRe\+X\+\_\+\+Parm\+Parse.\+H$>$}\newline
+Include dependency graph for IBM.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{IBM_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+HOST\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{IBM_8cpp_a740bccc8d6c8d1ea9c24896db7790552}{extrapolate\+GP}} (Array2D$<$ Real, 0, \mbox{\hyperlink{IBM_8h_aa3bb3b5f8fcd8b028b753db498e5c2ef}{NIMPS}}+1, 0, NPRIM-\/1 $>$ \&state, Real dgp, Real dim)
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+HOST\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{IBM_8cpp_a396f52e6381230aa4529a35700ade0b5}{global2local}} (int jj, Array2D$<$ Real, 0, \mbox{\hyperlink{IBM_8h_aa3bb3b5f8fcd8b028b753db498e5c2ef}{NIMPS}}+1, 0, NPRIM-\/1 $>$ \&prim\+State\+Normal, const Array1D$<$ Real, 0, AMREX\+\_\+\+SPACEDIM-\/1 $>$ \&norm, const Array1D$<$ Real, 0, AMREX\+\_\+\+SPACEDIM-\/1 $>$ \&tan1, const Array1D$<$ Real, 0, AMREX\+\_\+\+SPACEDIM-\/1 $>$ \&tan2)
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+HOST\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{IBM_8cpp_ab53277aa7ac63e966d1f3d448754208b}{local2global}} (int jj, Array2D$<$ Real, 0, \mbox{\hyperlink{IBM_8h_aa3bb3b5f8fcd8b028b753db498e5c2ef}{NIMPS}}+1, 0, NPRIM-\/1 $>$ \&prim\+State\+Normal, const Array1D$<$ Real, 0, AMREX\+\_\+\+SPACEDIM-\/1 $>$ \&norm, const Array1D$<$ Real, 0, AMREX\+\_\+\+SPACEDIM-\/1 $>$ \&tan1, const Array1D$<$ Real, 0, AMREX\+\_\+\+SPACEDIM-\/1 $>$ \&tan2)
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+HOST\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{IBM_8cpp_a8617747b154553508526959b67cfc38c}{Compute\+GPState}} (int ii, auto const gp\+\_\+ijk, auto const imp\+\_\+ijk, auto const weights, auto const norm, auto const tan1, auto const tan2, const Real dis\+GP, const Real dis\+IM, const Array4$<$ bool $>$ ib\+Fab, Array4$<$ Real $>$ prim\+Fab, Array4$<$ Real $>$ con\+Fab, auto const idx\+Cube, const PROB\+::\+Prob\+Closures \&closures)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{IBM_8cpp_a8617747b154553508526959b67cfc38c}\label{IBM_8cpp_a8617747b154553508526959b67cfc38c}} 
+\index{IBM.cpp@{IBM.cpp}!ComputeGPState@{ComputeGPState}}
+\index{ComputeGPState@{ComputeGPState}!IBM.cpp@{IBM.cpp}}
+\doxysubsubsection{\texorpdfstring{ComputeGPState()}{ComputeGPState()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+HOST\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void Compute\+GPState (\begin{DoxyParamCaption}\item[{int}]{ii,  }\item[{auto const}]{gp\+\_\+ijk,  }\item[{auto const}]{imp\+\_\+ijk,  }\item[{auto const}]{weights,  }\item[{auto const}]{norm,  }\item[{auto const}]{tan1,  }\item[{auto const}]{tan2,  }\item[{const Real}]{dis\+GP,  }\item[{const Real}]{dis\+IM,  }\item[{const Array4$<$ bool $>$}]{ib\+Fab,  }\item[{Array4$<$ Real $>$}]{prim\+Fab,  }\item[{Array4$<$ Real $>$}]{con\+Fab,  }\item[{auto const}]{idx\+Cube,  }\item[{const PROB\+::\+Prob\+Closures \&}]{closures }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{IBM_8cpp_a740bccc8d6c8d1ea9c24896db7790552}\label{IBM_8cpp_a740bccc8d6c8d1ea9c24896db7790552}} 
+\index{IBM.cpp@{IBM.cpp}!extrapolateGP@{extrapolateGP}}
+\index{extrapolateGP@{extrapolateGP}!IBM.cpp@{IBM.cpp}}
+\doxysubsubsection{\texorpdfstring{extrapolateGP()}{extrapolateGP()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+HOST\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void extrapolate\+GP (\begin{DoxyParamCaption}\item[{Array2D$<$ Real, 0, \mbox{\hyperlink{IBM_8h_aa3bb3b5f8fcd8b028b753db498e5c2ef}{NIMPS}}+1, 0, NPRIM-\/1 $>$ \&}]{state,  }\item[{Real}]{dgp,  }\item[{Real}]{dim }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{IBM_8cpp_a396f52e6381230aa4529a35700ade0b5}\label{IBM_8cpp_a396f52e6381230aa4529a35700ade0b5}} 
+\index{IBM.cpp@{IBM.cpp}!global2local@{global2local}}
+\index{global2local@{global2local}!IBM.cpp@{IBM.cpp}}
+\doxysubsubsection{\texorpdfstring{global2local()}{global2local()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+HOST\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void global2local (\begin{DoxyParamCaption}\item[{int}]{jj,  }\item[{Array2D$<$ Real, 0, \mbox{\hyperlink{IBM_8h_aa3bb3b5f8fcd8b028b753db498e5c2ef}{NIMPS}}+1, 0, NPRIM-\/1 $>$ \&}]{prim\+State\+Normal,  }\item[{const Array1D$<$ Real, 0, AMREX\+\_\+\+SPACEDIM-\/1 $>$ \&}]{norm,  }\item[{const Array1D$<$ Real, 0, AMREX\+\_\+\+SPACEDIM-\/1 $>$ \&}]{tan1,  }\item[{const Array1D$<$ Real, 0, AMREX\+\_\+\+SPACEDIM-\/1 $>$ \&}]{tan2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{IBM_8cpp_ab53277aa7ac63e966d1f3d448754208b}\label{IBM_8cpp_ab53277aa7ac63e966d1f3d448754208b}} 
+\index{IBM.cpp@{IBM.cpp}!local2global@{local2global}}
+\index{local2global@{local2global}!IBM.cpp@{IBM.cpp}}
+\doxysubsubsection{\texorpdfstring{local2global()}{local2global()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+HOST\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void local2global (\begin{DoxyParamCaption}\item[{int}]{jj,  }\item[{Array2D$<$ Real, 0, \mbox{\hyperlink{IBM_8h_aa3bb3b5f8fcd8b028b753db498e5c2ef}{NIMPS}}+1, 0, NPRIM-\/1 $>$ \&}]{prim\+State\+Normal,  }\item[{const Array1D$<$ Real, 0, AMREX\+\_\+\+SPACEDIM-\/1 $>$ \&}]{norm,  }\item[{const Array1D$<$ Real, 0, AMREX\+\_\+\+SPACEDIM-\/1 $>$ \&}]{tan1,  }\item[{const Array1D$<$ Real, 0, AMREX\+\_\+\+SPACEDIM-\/1 $>$ \&}]{tan2 }\end{DoxyParamCaption})}
+

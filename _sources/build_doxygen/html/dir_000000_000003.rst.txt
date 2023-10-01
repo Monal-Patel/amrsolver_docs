@@ -1,0 +1,14 @@
+.. meta::f416757dbaecead7f3d63e0dda02922756b28caf45774dde18f2d032f6c50bc76dc7e8bc47903a09fa3c980119c414a5fd21da372b28d55e0dce929539fa6d91
+
+:orphan:
+
+.. title:: AMR solver: /media/monal/main/code/amrsolver1/src -&gt; rhs Relation
+
+/media/monal/main/code/amrsolver1/src -&gt; rhs Relation
+========================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_000000_000003.html

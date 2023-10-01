@@ -1,0 +1,44 @@
+\hypertarget{Riemann_8h}{}\doxysection{/media/monal/main/code/amrsolver1/src/rhs/\+Riemann.h File Reference}
+\label{Riemann_8h}\index{/media/monal/main/code/amrsolver1/src/rhs/Riemann.h@{/media/monal/main/code/amrsolver1/src/rhs/Riemann.h}}
+{\ttfamily \#include $<$CNS.\+h$>$}\newline
+{\ttfamily \#include $<$AMRe\+X\+\_\+\+FArray\+Box.\+H$>$}\newline
+Include dependency graph for Riemann.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Riemann_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{Riemann_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceRiemann}{Riemann}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE Real \mbox{\hyperlink{namespaceRiemann_a0c4284ae85241456e83209ef43b144ee}{Riemann\+::limiter}} (Real dlft, Real drgt) noexcept
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceRiemann_ae5a9c7f56dc88381edcfdfcd10fc28b4}{Riemann\+::cns\+\_\+slope\+\_\+x}} (int i, int j, int k, Array4$<$ Real $>$ const \&dq, Array4$<$ Real const $>$ const \&q, PROB\+::\+Prob\+Closures const \&closures) noexcept
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceRiemann_a7a547aa3b362edad87f0b50c23b05f6c}{Riemann\+::cns\+\_\+slope\+\_\+y}} (int i, int j, int k, Array4$<$ Real $>$ const \&dq, Array4$<$ Real const $>$ const \&q, PROB\+::\+Prob\+Closures const \&closures) noexcept
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceRiemann_ad1adf2416831e505243a60dc3e5345db}{Riemann\+::cns\+\_\+slope\+\_\+z}} (int i, int j, int k, Array4$<$ Real $>$ const \&dq, Array4$<$ Real const $>$ const \&q, PROB\+::\+Prob\+Closures const \&closures) noexcept
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceRiemann_a59017d1ac0b34448ce084ff3662f7fa5}{Riemann\+::riemann\+\_\+prob}} (const Real gamma, const Real smallp, const Real, const Real rl, const Real ul, const Real pl, const Real ut1l, const Real ut2l, const Real rr, const Real ur, const Real pr, const Real ut1r, const Real ut2r, Real \&flxrho, Real \&flxu, Real \&flxut, Real \&flxutt, Real \&flxe) noexcept
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceRiemann_addba2114102f609216d1f1972fc52350}{Riemann\+::cns\+\_\+riemann\+\_\+x}} (int i, int j, int k, Array4$<$ Real $>$ const \&fx, Array4$<$ Real const $>$ const \&dq, Array4$<$ Real const $>$ const \&q, PROB\+::\+Prob\+Closures const \&closures) noexcept
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceRiemann_a85adddbc94ebbaf5fcffc339cdcdca1d}{Riemann\+::cns\+\_\+riemann\+\_\+y}} (int i, int j, int k, Array4$<$ Real $>$ const \&fy, Array4$<$ Real const $>$ const \&dq, Array4$<$ Real const $>$ const \&q, PROB\+::\+Prob\+Closures const \&closures) noexcept
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceRiemann_a6e6fad774cbde1ec3a3f17b312825896}{Riemann\+::cns\+\_\+riemann\+\_\+z}} (int i, int j, int k, Array4$<$ Real $>$ const \&fz, Array4$<$ Real const $>$ const \&dq, Array4$<$ Real const $>$ const \&q, PROB\+::\+Prob\+Closures const \&closures) noexcept
+\item 
+AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceRiemann_a7e01072685c19b5a0744ee2130361f19}{Riemann\+::\+Flux}} (Multi\+Fab \&statemf, Multi\+Fab \&primsmf, Array$<$ Multi\+Fab, AMREX\+\_\+\+SPACEDIM $>$ \&numflxmf)
+\end{DoxyCompactItemize}

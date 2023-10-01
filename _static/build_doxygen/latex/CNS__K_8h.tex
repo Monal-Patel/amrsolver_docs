@@ -1,0 +1,74 @@
+\hypertarget{CNS__K_8h}{}\doxysection{/media/monal/main/code/amrsolver1/src/cls/\+CNS\+\_\+K.h File Reference}
+\label{CNS__K_8h}\index{/media/monal/main/code/amrsolver1/src/cls/CNS\_K.h@{/media/monal/main/code/amrsolver1/src/cls/CNS\_K.h}}
+{\ttfamily \#include $<$AMRe\+X\+\_\+\+FArray\+Box.\+H$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$cns\+\_\+prob.\+H$>$}\newline
+Include dependency graph for CNS\+\_\+\+K.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CNS__K_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CNS__K_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+HOST\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE Real \mbox{\hyperlink{CNS__K_8h_ac4db5fc5db3dedcf3a0c68d249d49dd9}{cns\+\_\+estdt}} (Box const \&bx, Array4$<$ Real const $>$ const \&state, Gpu\+Array$<$ Real, AMREX\+\_\+\+SPACEDIM $>$ const \&dx, const PROB\+::\+Prob\+Closures \&closures) noexcept
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{CNS__K_8h_aeccbca366fb3480fefa8e34f61d3ba83}{point\+CFL}} (int i, int j, int k, Array2D$<$ Real, 0, 2, 0, 2 $>$ \&array, const Array4$<$ const Real $>$ \&prims, const PROB\+::\+Prob\+Closures \&closures, const auto dx, Real dt) noexcept
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{CNS__K_8h_a0b12c440e050457419448a922b2b8e49}{cns\+\_\+compute\+\_\+temperature}} (int i, int j, int k, Array4$<$ Real $>$ const \&u, const PROB\+::\+Prob\+Closures \&closures) noexcept
+\item 
+void \mbox{\hyperlink{CNS__K_8h_a2a056f09fc1ba80d8f21c6834aa91113}{derpres}} (const Box \&bx, FArray\+Box \&derfab, int dcomp, int, const FArray\+Box \&datafab, const Geometry \&, Real, const int $\ast$, int)
+\item 
+void \mbox{\hyperlink{CNS__K_8h_a2fb143a5bb04a286051aeb9d015ccccc}{dertemp}} (const Box \&bx, FArray\+Box \&derfab, int dcomp, int, const FArray\+Box \&datafab, const Geometry \&, Real, const int $\ast$, int)
+\item 
+void \mbox{\hyperlink{CNS__K_8h_a30b1104d74424eb86fda01178b529fe0}{dervel}} (const Box \&bx, FArray\+Box \&derfab, int dcomp, int, const FArray\+Box \&datfab, const Geometry \&, Real, const int $\ast$, const int)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{CNS__K_8h_a0b12c440e050457419448a922b2b8e49}\label{CNS__K_8h_a0b12c440e050457419448a922b2b8e49}} 
+\index{CNS\_K.h@{CNS\_K.h}!cns\_compute\_temperature@{cns\_compute\_temperature}}
+\index{cns\_compute\_temperature@{cns\_compute\_temperature}!CNS\_K.h@{CNS\_K.h}}
+\doxysubsubsection{\texorpdfstring{cns\_compute\_temperature()}{cns\_compute\_temperature()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void cns\+\_\+compute\+\_\+temperature (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{k,  }\item[{Array4$<$ Real $>$ const \&}]{u,  }\item[{const PROB\+::\+Prob\+Closures \&}]{closures }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{CNS__K_8h_ac4db5fc5db3dedcf3a0c68d249d49dd9}\label{CNS__K_8h_ac4db5fc5db3dedcf3a0c68d249d49dd9}} 
+\index{CNS\_K.h@{CNS\_K.h}!cns\_estdt@{cns\_estdt}}
+\index{cns\_estdt@{cns\_estdt}!CNS\_K.h@{CNS\_K.h}}
+\doxysubsubsection{\texorpdfstring{cns\_estdt()}{cns\_estdt()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+HOST\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE Real cns\+\_\+estdt (\begin{DoxyParamCaption}\item[{Box const \&}]{bx,  }\item[{Array4$<$ Real const $>$ const \&}]{state,  }\item[{Gpu\+Array$<$ Real, AMREX\+\_\+\+SPACEDIM $>$ const \&}]{dx,  }\item[{const PROB\+::\+Prob\+Closures \&}]{closures }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{CNS__K_8h_a2a056f09fc1ba80d8f21c6834aa91113}\label{CNS__K_8h_a2a056f09fc1ba80d8f21c6834aa91113}} 
+\index{CNS\_K.h@{CNS\_K.h}!derpres@{derpres}}
+\index{derpres@{derpres}!CNS\_K.h@{CNS\_K.h}}
+\doxysubsubsection{\texorpdfstring{derpres()}{derpres()}}
+{\footnotesize\ttfamily void derpres (\begin{DoxyParamCaption}\item[{const Box \&}]{bx,  }\item[{FArray\+Box \&}]{derfab,  }\item[{int}]{dcomp,  }\item[{int}]{,  }\item[{const FArray\+Box \&}]{datafab,  }\item[{const Geometry \&}]{,  }\item[{Real}]{,  }\item[{const int $\ast$}]{,  }\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{CNS__K_8h_a2fb143a5bb04a286051aeb9d015ccccc}\label{CNS__K_8h_a2fb143a5bb04a286051aeb9d015ccccc}} 
+\index{CNS\_K.h@{CNS\_K.h}!dertemp@{dertemp}}
+\index{dertemp@{dertemp}!CNS\_K.h@{CNS\_K.h}}
+\doxysubsubsection{\texorpdfstring{dertemp()}{dertemp()}}
+{\footnotesize\ttfamily void dertemp (\begin{DoxyParamCaption}\item[{const Box \&}]{bx,  }\item[{FArray\+Box \&}]{derfab,  }\item[{int}]{dcomp,  }\item[{int}]{,  }\item[{const FArray\+Box \&}]{datafab,  }\item[{const Geometry \&}]{,  }\item[{Real}]{,  }\item[{const int $\ast$}]{,  }\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{CNS__K_8h_a30b1104d74424eb86fda01178b529fe0}\label{CNS__K_8h_a30b1104d74424eb86fda01178b529fe0}} 
+\index{CNS\_K.h@{CNS\_K.h}!dervel@{dervel}}
+\index{dervel@{dervel}!CNS\_K.h@{CNS\_K.h}}
+\doxysubsubsection{\texorpdfstring{dervel()}{dervel()}}
+{\footnotesize\ttfamily void dervel (\begin{DoxyParamCaption}\item[{const Box \&}]{bx,  }\item[{FArray\+Box \&}]{derfab,  }\item[{int}]{dcomp,  }\item[{int}]{,  }\item[{const FArray\+Box \&}]{datfab,  }\item[{const Geometry \&}]{,  }\item[{Real}]{,  }\item[{const int $\ast$}]{,  }\item[{const int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{CNS__K_8h_aeccbca366fb3480fefa8e34f61d3ba83}\label{CNS__K_8h_aeccbca366fb3480fefa8e34f61d3ba83}} 
+\index{CNS\_K.h@{CNS\_K.h}!pointCFL@{pointCFL}}
+\index{pointCFL@{pointCFL}!CNS\_K.h@{CNS\_K.h}}
+\doxysubsubsection{\texorpdfstring{pointCFL()}{pointCFL()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void point\+CFL (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{k,  }\item[{Array2D$<$ Real, 0, 2, 0, 2 $>$ \&}]{array,  }\item[{const Array4$<$ const Real $>$ \&}]{prims,  }\item[{const PROB\+::\+Prob\+Closures \&}]{closures,  }\item[{const auto}]{dx,  }\item[{Real}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+

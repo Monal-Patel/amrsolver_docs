@@ -1,0 +1,230 @@
+\hypertarget{classIBM_1_1IB}{}\doxysection{IBM\+::IB Class Reference}
+\label{classIBM_1_1IB}\index{IBM::IB@{IBM::IB}}
+
+
+{\ttfamily \#include $<$IBM.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classIBM_1_1IB_a09f6960bfddbfc3f11d5c1ea88126fe8}{IB}} ()
+\item 
+\mbox{\hyperlink{classIBM_1_1IB_ac796bb3e4cbdb5604997757bb1e26526}{$\sim$\+IB}} ()
+\item 
+void \mbox{\hyperlink{classIBM_1_1IB_a44bbe21ff8a6b8c8b2e5e3b2a06a904c}{init}} (Amr $\ast$pointer\+\_\+amr, const int nghost)
+\item 
+void \mbox{\hyperlink{classIBM_1_1IB_a047c2970279692b0e1a227744aaec732}{build\+MFs}} (const Box\+Array \&bxa, const Distribution\+Mapping \&dm, int lev)
+\item 
+void \mbox{\hyperlink{classIBM_1_1IB_a9092771a93b992a8ee368d98f3e51a2d}{destroy\+MFs}} (int lev)
+\item 
+void \mbox{\hyperlink{classIBM_1_1IB_a54fd5d0d5a8a9a229fc9ccd968fb6d5c}{read\+Geom}} ()
+\item 
+void \mbox{\hyperlink{classIBM_1_1IB_a7c0a9d89732c1e5175582e2ca4797fba}{compute\+Markers}} (int lev)
+\item 
+void \mbox{\hyperlink{classIBM_1_1IB_ac0f484ffb8af42fd84c9385ee7d923cb}{initialise\+GPs}} (int lev)
+\item 
+void \mbox{\hyperlink{classIBM_1_1IB_aebb6f1ca76481dd7fc5e8423865e4d55}{compute\+GPs}} (int lev, Multi\+Fab \&consmf, Multi\+Fab \&primsmf, const PROB\+::\+Prob\+Closures \&closures)
+\item 
+void \mbox{\hyperlink{classIBM_1_1IB_abfe99f9e4c4e3caf1b5c99d790561210}{move\+Geom}} ()
+\item 
+void \mbox{\hyperlink{classIBM_1_1IB_a8a0cb7ce4071f9a551b848ff2bac8f2b}{compute\+Surf}} (int lev)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classIBM_1_1IB_af9c6a388abcff783ac03ffac79a2eb7d}{compute\+\_\+plane\+\_\+equations}} (Polyhedron\+::\+Facet \&f)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vector$<$ Real $>$ \mbox{\hyperlink{classIBM_1_1IB_a73be569d71c7dfad84a7cce2a0086586}{dis\+IM}}
+\item 
+int \mbox{\hyperlink{classIBM_1_1IB_a1f9ecaba9a5162fbe3d22e68e5e67649}{MAX\+\_\+\+LEVEL}} = 0
+\item 
+int \mbox{\hyperlink{classIBM_1_1IB_a8e53bbbdda28918c0bd9e36d1a583188}{NGHOST\+\_\+\+IB}} = 0
+\item 
+const int \mbox{\hyperlink{classIBM_1_1IB_a4c42acc282725731e0ede5c173a43b33}{NVAR\+\_\+\+IB}} = 2
+\item 
+Amr $\ast$ \mbox{\hyperlink{classIBM_1_1IB_a3ba2ac24f1f7ecd63d34353d2fb2e999}{pamr}}
+\item 
+Vector$<$ Int\+Vect $>$ \mbox{\hyperlink{classIBM_1_1IB_adb32acf0ce453f0e54b666d3fcaad2e0}{ref\+\_\+ratio}}
+\item 
+Vector$<$ Gpu\+Array$<$ Real, AMREX\+\_\+\+SPACEDIM $>$ $>$ \mbox{\hyperlink{classIBM_1_1IB_a7c9679ddd949b4945b05b22f92c3f506}{cell\+Sizes}}
+\item 
+Vector$<$ \mbox{\hyperlink{classIBM_1_1IBMultiFab}{IBMulti\+Fab}} $\ast$ $>$ \mbox{\hyperlink{classIBM_1_1IB_a8ff615e4167cbecef6daee586831df7a}{ib\+MFa}}
+\item 
+Vector$<$ Multi\+Fab $>$ \mbox{\hyperlink{classIBM_1_1IB_a85b4b2b8f08e3bbf0f43e121adbcb77a}{ls\+MFa}}
+\item 
+\mbox{\hyperlink{namespaceIBM_aef0e4eb6d237070846f13a40d2e90063}{Polyhedron}} \mbox{\hyperlink{classIBM_1_1IB_ae7f9f222de2e5fcdd5db0b17df39b63f}{geom}}
+\item 
+\mbox{\hyperlink{namespaceIBM_ad9f4d764f206d71381e965523b58ace3}{Tree}} $\ast$ \mbox{\hyperlink{classIBM_1_1IB_afae998704e6da3b34fd1c59f4074e672}{tree\+Ptr}}
+\item 
+std\+::map$<$ \mbox{\hyperlink{namespaceIBM_ad80af28e30018458d4c4c1efc0ba02d7}{face\+\_\+descriptor}}, \mbox{\hyperlink{namespaceIBM_a3ed74778d4b5bb4688ad8aa65f024af3}{Vector\+\_\+\+CGAL}} $>$ \mbox{\hyperlink{classIBM_1_1IB_a471b16fe6a4073eb5463c2ac71846933}{fnormals}}
+\item 
+std\+::map$<$ \mbox{\hyperlink{namespaceIBM_ad80af28e30018458d4c4c1efc0ba02d7}{face\+\_\+descriptor}}, \mbox{\hyperlink{structIBM_1_1surfdata}{surfdata}} $>$ \mbox{\hyperlink{classIBM_1_1IB_af7344a130ff189614b58136411565c60}{face2state}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classIBM_1_1IB_a09f6960bfddbfc3f11d5c1ea88126fe8}\label{classIBM_1_1IB_a09f6960bfddbfc3f11d5c1ea88126fe8}} 
+\index{IBM::IB@{IBM::IB}!IB@{IB}}
+\index{IB@{IB}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{IB()}{IB()}}
+{\footnotesize\ttfamily IB\+::\+IB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classIBM_1_1IB_ac796bb3e4cbdb5604997757bb1e26526}\label{classIBM_1_1IB_ac796bb3e4cbdb5604997757bb1e26526}} 
+\index{IBM::IB@{IBM::IB}!````~IB@{$\sim$IB}}
+\index{````~IB@{$\sim$IB}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{$\sim$IB()}{~IB()}}
+{\footnotesize\ttfamily IB\+::$\sim$\+IB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIBM_1_1IB_a047c2970279692b0e1a227744aaec732}\label{classIBM_1_1IB_a047c2970279692b0e1a227744aaec732}} 
+\index{IBM::IB@{IBM::IB}!buildMFs@{buildMFs}}
+\index{buildMFs@{buildMFs}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{buildMFs()}{buildMFs()}}
+{\footnotesize\ttfamily void IB\+::build\+MFs (\begin{DoxyParamCaption}\item[{const Box\+Array \&}]{bxa,  }\item[{const Distribution\+Mapping \&}]{dm,  }\item[{int}]{lev }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classIBM_1_1IB_af9c6a388abcff783ac03ffac79a2eb7d}\label{classIBM_1_1IB_af9c6a388abcff783ac03ffac79a2eb7d}} 
+\index{IBM::IB@{IBM::IB}!compute\_plane\_equations@{compute\_plane\_equations}}
+\index{compute\_plane\_equations@{compute\_plane\_equations}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{compute\_plane\_equations()}{compute\_plane\_equations()}}
+{\footnotesize\ttfamily void IB\+::compute\+\_\+plane\+\_\+equations (\begin{DoxyParamCaption}\item[{Polyhedron\+::\+Facet \&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classIBM_1_1IB_aebb6f1ca76481dd7fc5e8423865e4d55}\label{classIBM_1_1IB_aebb6f1ca76481dd7fc5e8423865e4d55}} 
+\index{IBM::IB@{IBM::IB}!computeGPs@{computeGPs}}
+\index{computeGPs@{computeGPs}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{computeGPs()}{computeGPs()}}
+{\footnotesize\ttfamily void IB\+::compute\+GPs (\begin{DoxyParamCaption}\item[{int}]{lev,  }\item[{Multi\+Fab \&}]{consmf,  }\item[{Multi\+Fab \&}]{primsmf,  }\item[{const PROB\+::\+Prob\+Closures \&}]{closures }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classIBM_1_1IB_a7c0a9d89732c1e5175582e2ca4797fba}\label{classIBM_1_1IB_a7c0a9d89732c1e5175582e2ca4797fba}} 
+\index{IBM::IB@{IBM::IB}!computeMarkers@{computeMarkers}}
+\index{computeMarkers@{computeMarkers}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{computeMarkers()}{computeMarkers()}}
+{\footnotesize\ttfamily void IB\+::compute\+Markers (\begin{DoxyParamCaption}\item[{int}]{lev }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classIBM_1_1IB_a8a0cb7ce4071f9a551b848ff2bac8f2b}\label{classIBM_1_1IB_a8a0cb7ce4071f9a551b848ff2bac8f2b}} 
+\index{IBM::IB@{IBM::IB}!computeSurf@{computeSurf}}
+\index{computeSurf@{computeSurf}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{computeSurf()}{computeSurf()}}
+{\footnotesize\ttfamily void IB\+::compute\+Surf (\begin{DoxyParamCaption}\item[{int}]{lev }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classIBM_1_1IB_a9092771a93b992a8ee368d98f3e51a2d}\label{classIBM_1_1IB_a9092771a93b992a8ee368d98f3e51a2d}} 
+\index{IBM::IB@{IBM::IB}!destroyMFs@{destroyMFs}}
+\index{destroyMFs@{destroyMFs}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{destroyMFs()}{destroyMFs()}}
+{\footnotesize\ttfamily void IB\+::destroy\+MFs (\begin{DoxyParamCaption}\item[{int}]{lev }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classIBM_1_1IB_a44bbe21ff8a6b8c8b2e5e3b2a06a904c}\label{classIBM_1_1IB_a44bbe21ff8a6b8c8b2e5e3b2a06a904c}} 
+\index{IBM::IB@{IBM::IB}!init@{init}}
+\index{init@{init}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void IB\+::init (\begin{DoxyParamCaption}\item[{Amr $\ast$}]{pointer\+\_\+amr,  }\item[{const int}]{nghost }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classIBM_1_1IB_ac0f484ffb8af42fd84c9385ee7d923cb}\label{classIBM_1_1IB_ac0f484ffb8af42fd84c9385ee7d923cb}} 
+\index{IBM::IB@{IBM::IB}!initialiseGPs@{initialiseGPs}}
+\index{initialiseGPs@{initialiseGPs}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{initialiseGPs()}{initialiseGPs()}}
+{\footnotesize\ttfamily void IB\+::initialise\+GPs (\begin{DoxyParamCaption}\item[{int}]{lev }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classIBM_1_1IB_abfe99f9e4c4e3caf1b5c99d790561210}\label{classIBM_1_1IB_abfe99f9e4c4e3caf1b5c99d790561210}} 
+\index{IBM::IB@{IBM::IB}!moveGeom@{moveGeom}}
+\index{moveGeom@{moveGeom}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{moveGeom()}{moveGeom()}}
+{\footnotesize\ttfamily void IB\+::move\+Geom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classIBM_1_1IB_a54fd5d0d5a8a9a229fc9ccd968fb6d5c}\label{classIBM_1_1IB_a54fd5d0d5a8a9a229fc9ccd968fb6d5c}} 
+\index{IBM::IB@{IBM::IB}!readGeom@{readGeom}}
+\index{readGeom@{readGeom}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{readGeom()}{readGeom()}}
+{\footnotesize\ttfamily void IB\+::read\+Geom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classIBM_1_1IB_a7c9679ddd949b4945b05b22f92c3f506}\label{classIBM_1_1IB_a7c9679ddd949b4945b05b22f92c3f506}} 
+\index{IBM::IB@{IBM::IB}!cellSizes@{cellSizes}}
+\index{cellSizes@{cellSizes}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{cellSizes}{cellSizes}}
+{\footnotesize\ttfamily Vector$<$Gpu\+Array$<$Real,AMREX\+\_\+\+SPACEDIM$>$ $>$ IBM\+::\+IB\+::cell\+Sizes}
+
+\mbox{\Hypertarget{classIBM_1_1IB_a73be569d71c7dfad84a7cce2a0086586}\label{classIBM_1_1IB_a73be569d71c7dfad84a7cce2a0086586}} 
+\index{IBM::IB@{IBM::IB}!disIM@{disIM}}
+\index{disIM@{disIM}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{disIM}{disIM}}
+{\footnotesize\ttfamily Vector$<$Real$>$ IBM\+::\+IB\+::dis\+IM}
+
+\mbox{\Hypertarget{classIBM_1_1IB_af7344a130ff189614b58136411565c60}\label{classIBM_1_1IB_af7344a130ff189614b58136411565c60}} 
+\index{IBM::IB@{IBM::IB}!face2state@{face2state}}
+\index{face2state@{face2state}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{face2state}{face2state}}
+{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{namespaceIBM_ad80af28e30018458d4c4c1efc0ba02d7}{face\+\_\+descriptor}},\mbox{\hyperlink{structIBM_1_1surfdata}{surfdata}}$>$ IBM\+::\+IB\+::face2state}
+
+\mbox{\Hypertarget{classIBM_1_1IB_a471b16fe6a4073eb5463c2ac71846933}\label{classIBM_1_1IB_a471b16fe6a4073eb5463c2ac71846933}} 
+\index{IBM::IB@{IBM::IB}!fnormals@{fnormals}}
+\index{fnormals@{fnormals}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{fnormals}{fnormals}}
+{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{namespaceIBM_ad80af28e30018458d4c4c1efc0ba02d7}{face\+\_\+descriptor}},\mbox{\hyperlink{namespaceIBM_a3ed74778d4b5bb4688ad8aa65f024af3}{Vector\+\_\+\+CGAL}}$>$ IBM\+::\+IB\+::fnormals}
+
+\mbox{\Hypertarget{classIBM_1_1IB_ae7f9f222de2e5fcdd5db0b17df39b63f}\label{classIBM_1_1IB_ae7f9f222de2e5fcdd5db0b17df39b63f}} 
+\index{IBM::IB@{IBM::IB}!geom@{geom}}
+\index{geom@{geom}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{geom}{geom}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceIBM_aef0e4eb6d237070846f13a40d2e90063}{Polyhedron}} IBM\+::\+IB\+::geom}
+
+\mbox{\Hypertarget{classIBM_1_1IB_a8ff615e4167cbecef6daee586831df7a}\label{classIBM_1_1IB_a8ff615e4167cbecef6daee586831df7a}} 
+\index{IBM::IB@{IBM::IB}!ibMFa@{ibMFa}}
+\index{ibMFa@{ibMFa}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{ibMFa}{ibMFa}}
+{\footnotesize\ttfamily Vector$<$\mbox{\hyperlink{classIBM_1_1IBMultiFab}{IBMulti\+Fab}}$\ast$$>$ IBM\+::\+IB\+::ib\+MFa}
+
+\mbox{\Hypertarget{classIBM_1_1IB_a85b4b2b8f08e3bbf0f43e121adbcb77a}\label{classIBM_1_1IB_a85b4b2b8f08e3bbf0f43e121adbcb77a}} 
+\index{IBM::IB@{IBM::IB}!lsMFa@{lsMFa}}
+\index{lsMFa@{lsMFa}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{lsMFa}{lsMFa}}
+{\footnotesize\ttfamily Vector$<$Multi\+Fab$>$ IBM\+::\+IB\+::ls\+MFa}
+
+\mbox{\Hypertarget{classIBM_1_1IB_a1f9ecaba9a5162fbe3d22e68e5e67649}\label{classIBM_1_1IB_a1f9ecaba9a5162fbe3d22e68e5e67649}} 
+\index{IBM::IB@{IBM::IB}!MAX\_LEVEL@{MAX\_LEVEL}}
+\index{MAX\_LEVEL@{MAX\_LEVEL}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{MAX\_LEVEL}{MAX\_LEVEL}}
+{\footnotesize\ttfamily int IBM\+::\+IB\+::\+MAX\+\_\+\+LEVEL = 0}
+
+\mbox{\Hypertarget{classIBM_1_1IB_a8e53bbbdda28918c0bd9e36d1a583188}\label{classIBM_1_1IB_a8e53bbbdda28918c0bd9e36d1a583188}} 
+\index{IBM::IB@{IBM::IB}!NGHOST\_IB@{NGHOST\_IB}}
+\index{NGHOST\_IB@{NGHOST\_IB}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{NGHOST\_IB}{NGHOST\_IB}}
+{\footnotesize\ttfamily int IBM\+::\+IB\+::\+NGHOST\+\_\+\+IB = 0}
+
+\mbox{\Hypertarget{classIBM_1_1IB_a4c42acc282725731e0ede5c173a43b33}\label{classIBM_1_1IB_a4c42acc282725731e0ede5c173a43b33}} 
+\index{IBM::IB@{IBM::IB}!NVAR\_IB@{NVAR\_IB}}
+\index{NVAR\_IB@{NVAR\_IB}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{NVAR\_IB}{NVAR\_IB}}
+{\footnotesize\ttfamily const int IBM\+::\+IB\+::\+NVAR\+\_\+\+IB = 2}
+
+\mbox{\Hypertarget{classIBM_1_1IB_a3ba2ac24f1f7ecd63d34353d2fb2e999}\label{classIBM_1_1IB_a3ba2ac24f1f7ecd63d34353d2fb2e999}} 
+\index{IBM::IB@{IBM::IB}!pamr@{pamr}}
+\index{pamr@{pamr}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{pamr}{pamr}}
+{\footnotesize\ttfamily Amr$\ast$ IBM\+::\+IB\+::pamr}
+
+\mbox{\Hypertarget{classIBM_1_1IB_adb32acf0ce453f0e54b666d3fcaad2e0}\label{classIBM_1_1IB_adb32acf0ce453f0e54b666d3fcaad2e0}} 
+\index{IBM::IB@{IBM::IB}!ref\_ratio@{ref\_ratio}}
+\index{ref\_ratio@{ref\_ratio}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{ref\_ratio}{ref\_ratio}}
+{\footnotesize\ttfamily Vector$<$Int\+Vect$>$ IBM\+::\+IB\+::ref\+\_\+ratio}
+
+\mbox{\Hypertarget{classIBM_1_1IB_afae998704e6da3b34fd1c59f4074e672}\label{classIBM_1_1IB_afae998704e6da3b34fd1c59f4074e672}} 
+\index{IBM::IB@{IBM::IB}!treePtr@{treePtr}}
+\index{treePtr@{treePtr}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{treePtr}{treePtr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceIBM_ad9f4d764f206d71381e965523b58ace3}{Tree}}$\ast$ IBM\+::\+IB\+::tree\+Ptr}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/media/monal/main/code/amrsolver1/src/ibm/\mbox{\hyperlink{IBM_8h}{IBM.\+h}}\item 
+/media/monal/main/code/amrsolver1/src/ibm/\mbox{\hyperlink{IBM_8cpp}{IBM.\+cpp}}\end{DoxyCompactItemize}

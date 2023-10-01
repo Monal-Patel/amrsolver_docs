@@ -1,0 +1,56 @@
+\hypertarget{namespaceHiRes}{}\doxysection{Hi\+Res Namespace Reference}
+\label{namespaceHiRes}\index{HiRes@{HiRes}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceHiRes_ae9a9b4ba4f4622937d36b68aacd48b14}{cons2eulerflux}} (int i, int j, int k, auto const \&cons, auto const \&fx, auto const \&fy, auto const \&fz, const PROB\+::\+Prob\+Closures \&closures)
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceHiRes_a24ae7264feab2ea771ba1aa5bd3dcaf5}{cons2eulerflux\+\_\+lambda}} (int i, int j, int k, auto const \&cons, auto const \&fx, auto const \&fy, auto const \&fz, auto const \&lambda, const PROB\+::\+Prob\+Closures \&closures)
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE Real \mbox{\hyperlink{namespaceHiRes_a3c47fdfaf892abc0232428716edf6964}{weno5js}} (const Gpu\+Array$<$ Real, 5 $>$ \&s)
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceHiRes_a2da5365fe741884b8c6e8734831a0c5b}{numericalflux\+\_\+globallaxsplit}} (int i, int j, int k, int n, const auto \&cons, const auto \&pfx, const auto \&pfy, const auto \&pfz, const auto \&lambda, const auto \&nfx, const auto \&nfy, const auto \&nfz)
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceHiRes_ad0c0e48d1046026d107dc94f06d1db60}{numericalflux}} (int i, int j, int k, int n, const auto \&pfx, const auto \&pfy, const auto \&pfz, const auto \&nfx, const auto \&nfy, const auto \&nfz)
+\item 
+AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceHiRes_a9acde555b29be67a5090961193700570}{Flux\+WENO}} (Multi\+Fab \&statemf, Multi\+Fab \&primsmf, Array$<$ Multi\+Fab, AMREX\+\_\+\+SPACEDIM $>$ \&numflxmf)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceHiRes_ae9a9b4ba4f4622937d36b68aacd48b14}\label{namespaceHiRes_ae9a9b4ba4f4622937d36b68aacd48b14}} 
+\index{HiRes@{HiRes}!cons2eulerflux@{cons2eulerflux}}
+\index{cons2eulerflux@{cons2eulerflux}!HiRes@{HiRes}}
+\doxysubsubsection{\texorpdfstring{cons2eulerflux()}{cons2eulerflux()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void Hi\+Res\+::cons2eulerflux (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{k,  }\item[{auto const \&}]{cons,  }\item[{auto const \&}]{fx,  }\item[{auto const \&}]{fy,  }\item[{auto const \&}]{fz,  }\item[{const PROB\+::\+Prob\+Closures \&}]{closures }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceHiRes_a24ae7264feab2ea771ba1aa5bd3dcaf5}\label{namespaceHiRes_a24ae7264feab2ea771ba1aa5bd3dcaf5}} 
+\index{HiRes@{HiRes}!cons2eulerflux\_lambda@{cons2eulerflux\_lambda}}
+\index{cons2eulerflux\_lambda@{cons2eulerflux\_lambda}!HiRes@{HiRes}}
+\doxysubsubsection{\texorpdfstring{cons2eulerflux\_lambda()}{cons2eulerflux\_lambda()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void Hi\+Res\+::cons2eulerflux\+\_\+lambda (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{k,  }\item[{auto const \&}]{cons,  }\item[{auto const \&}]{fx,  }\item[{auto const \&}]{fy,  }\item[{auto const \&}]{fz,  }\item[{auto const \&}]{lambda,  }\item[{const PROB\+::\+Prob\+Closures \&}]{closures }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceHiRes_a9acde555b29be67a5090961193700570}\label{namespaceHiRes_a9acde555b29be67a5090961193700570}} 
+\index{HiRes@{HiRes}!FluxWENO@{FluxWENO}}
+\index{FluxWENO@{FluxWENO}!HiRes@{HiRes}}
+\doxysubsubsection{\texorpdfstring{FluxWENO()}{FluxWENO()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+FORCE\+\_\+\+INLINE void Hi\+Res\+::\+Flux\+WENO (\begin{DoxyParamCaption}\item[{Multi\+Fab \&}]{statemf,  }\item[{Multi\+Fab \&}]{primsmf,  }\item[{Array$<$ Multi\+Fab, AMREX\+\_\+\+SPACEDIM $>$ \&}]{numflxmf }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceHiRes_ad0c0e48d1046026d107dc94f06d1db60}\label{namespaceHiRes_ad0c0e48d1046026d107dc94f06d1db60}} 
+\index{HiRes@{HiRes}!numericalflux@{numericalflux}}
+\index{numericalflux@{numericalflux}!HiRes@{HiRes}}
+\doxysubsubsection{\texorpdfstring{numericalflux()}{numericalflux()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void Hi\+Res\+::numericalflux (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{k,  }\item[{int}]{n,  }\item[{const auto \&}]{pfx,  }\item[{const auto \&}]{pfy,  }\item[{const auto \&}]{pfz,  }\item[{const auto \&}]{nfx,  }\item[{const auto \&}]{nfy,  }\item[{const auto \&}]{nfz }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceHiRes_a2da5365fe741884b8c6e8734831a0c5b}\label{namespaceHiRes_a2da5365fe741884b8c6e8734831a0c5b}} 
+\index{HiRes@{HiRes}!numericalflux\_globallaxsplit@{numericalflux\_globallaxsplit}}
+\index{numericalflux\_globallaxsplit@{numericalflux\_globallaxsplit}!HiRes@{HiRes}}
+\doxysubsubsection{\texorpdfstring{numericalflux\_globallaxsplit()}{numericalflux\_globallaxsplit()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void Hi\+Res\+::numericalflux\+\_\+globallaxsplit (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{k,  }\item[{int}]{n,  }\item[{const auto \&}]{cons,  }\item[{const auto \&}]{pfx,  }\item[{const auto \&}]{pfy,  }\item[{const auto \&}]{pfz,  }\item[{const auto \&}]{lambda,  }\item[{const auto \&}]{nfx,  }\item[{const auto \&}]{nfy,  }\item[{const auto \&}]{nfz }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceHiRes_a3c47fdfaf892abc0232428716edf6964}\label{namespaceHiRes_a3c47fdfaf892abc0232428716edf6964}} 
+\index{HiRes@{HiRes}!weno5js@{weno5js}}
+\index{weno5js@{weno5js}!HiRes@{HiRes}}
+\doxysubsubsection{\texorpdfstring{weno5js()}{weno5js()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE Real Hi\+Res\+::weno5js (\begin{DoxyParamCaption}\item[{const Gpu\+Array$<$ Real, 5 $>$ \&}]{s }\end{DoxyParamCaption})}
+

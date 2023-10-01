@@ -1,0 +1,596 @@
+\hypertarget{classCNS}{}\doxysection{CNS Class Reference}
+\label{classCNS}\index{CNS@{CNS}}
+
+
+{\ttfamily \#include $<$CNS.\+h$>$}
+
+
+
+Inheritance diagram for CNS\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classCNS__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CNS\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classCNS__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classCNS_a19db9163ca9729a472a141eef3d7f9af}{State\+Variable}} \{ \newline
+\mbox{\hyperlink{classCNS_a19db9163ca9729a472a141eef3d7f9afa84b208b6274070582000de605e7beb82}{Density}} = 0
+, \mbox{\hyperlink{classCNS_a19db9163ca9729a472a141eef3d7f9afa2e4c6a35b76a37a45e45a03319ad6484}{Xmom}}
+, \mbox{\hyperlink{classCNS_a19db9163ca9729a472a141eef3d7f9afa07bbb939b92605e95a8e56d3c09b4ee8}{Ymom}}
+, \mbox{\hyperlink{classCNS_a19db9163ca9729a472a141eef3d7f9afad7deee1e9ef51d9e5b8a784280068c27}{Zmom}}
+, \newline
+\mbox{\hyperlink{classCNS_a19db9163ca9729a472a141eef3d7f9afaf0f129e644749d3505496718c82e9749}{Etot}}
+ \}
+\item 
+enum \mbox{\hyperlink{classCNS_ad530b2a17c558b9efc61df863034fe2c}{State\+Data\+Type}} \{ \mbox{\hyperlink{classCNS_ad530b2a17c558b9efc61df863034fe2ca64f97ecf29970c745a6d5c6469c6aac7}{State\+\_\+\+Type}} = 0
+, \mbox{\hyperlink{classCNS_ad530b2a17c558b9efc61df863034fe2ca991d4e2038989cac4d7294623d3daedb}{Cost\+\_\+\+Type}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCNS_a1309291650baed4b8037229960fba676}{CNS}} ()
+\item 
+\mbox{\hyperlink{classCNS_a19d2c5b1f5469e7ec802921e7214f27b}{CNS}} (amrex\+::\+Amr \&papa, int lev, const amrex\+::\+Geometry \&level\+\_\+geom, const amrex\+::\+Box\+Array \&bl, const amrex\+::\+Distribution\+Mapping \&dm, amrex\+::\+Real time)
+\item 
+\mbox{\hyperlink{classCNS_a48197a1f06cbc4e34eb03884e7ea50b1}{$\sim$\+CNS}} ()
+\item 
+\mbox{\hyperlink{classCNS_a0d9a67eddaa078fcd94c8f7d8e30e9d8}{CNS}} (const \mbox{\hyperlink{classCNS}{CNS}} \&rhs)=delete
+\item 
+\mbox{\hyperlink{classCNS}{CNS}} \& \mbox{\hyperlink{classCNS_a005a97d53770bc9775328fff6295fea4}{operator=}} (const \mbox{\hyperlink{classCNS}{CNS}} \&rhs)=delete
+\item 
+void \mbox{\hyperlink{classCNS_a82afea16bd86047ee71cd9a2510deff4}{init}} (amrex\+::\+Amr\+Level \&old) override
+\item 
+void \mbox{\hyperlink{classCNS_aa81e96ae79104179b77643f3ae8ca78c}{init}} () override
+\item 
+virtual void \mbox{\hyperlink{classCNS_a9fe7352c76bebcd0ac0e6dcb0e48e366}{init\+Data}} () override
+\item 
+virtual void \mbox{\hyperlink{classCNS_a54a545df481d31edfbcf5f1e145c10c9}{post\+\_\+init}} (amrex\+::\+Real stop\+\_\+time) override
+\item 
+void \mbox{\hyperlink{classCNS_a8fed302a126d1da6f90eca57589fcb70}{compute\+\_\+rhs}} (amrex\+::\+Multi\+Fab \&S, amrex\+::\+Multi\+Fab \&d\+Sdt, amrex\+::\+Real dt, amrex\+::\+Flux\+Register $\ast$fr\+\_\+as\+\_\+crse, amrex\+::\+Flux\+Register $\ast$fr\+\_\+as\+\_\+fine)
+\item 
+void \mbox{\hyperlink{classCNS_afa3a2058837e1173ece5bf1eb1750a0a}{compute\+Temp}} (amrex\+::\+Multi\+Fab \&State, int ng)
+\item 
+amrex\+::\+Real \mbox{\hyperlink{classCNS_a2ea82ccf446433baf83c3bdd30e263b2}{est\+Time\+Step}} ()
+\item 
+amrex\+::\+Real \mbox{\hyperlink{classCNS_aaa89010c03f9ab7da5302e775a711329}{initial\+Time\+Step}} ()
+\item 
+void \mbox{\hyperlink{classCNS_adf1f0571a86308ee1c28a6f89bb6b16c}{compute\+Initial\+Dt}} (int finest\+\_\+level, int sub\+\_\+cycle, amrex\+::\+Vector$<$ int $>$ \&n\+\_\+cycle, const amrex\+::\+Vector$<$ amrex\+::\+Int\+Vect $>$ \&ref\+\_\+ratio, amrex\+::\+Vector$<$ amrex\+::\+Real $>$ \&dt\+\_\+level, amrex\+::\+Real stop\+\_\+time) override
+\item 
+void \mbox{\hyperlink{classCNS_a96115d4d8886d4109ae13c6c8a6a144d}{compute\+New\+Dt}} (int finest\+\_\+level, int sub\+\_\+cycle, amrex\+::\+Vector$<$ int $>$ \&n\+\_\+cycle, const amrex\+::\+Vector$<$ amrex\+::\+Int\+Vect $>$ \&ref\+\_\+ratio, amrex\+::\+Vector$<$ amrex\+::\+Real $>$ \&dt\+\_\+min, amrex\+::\+Vector$<$ amrex\+::\+Real $>$ \&dt\+\_\+level, amrex\+::\+Real stop\+\_\+time, int post\+\_\+regrid\+\_\+flag) override
+\item 
+Real \mbox{\hyperlink{classCNS_a4ee2511ec4013744d11067b5f360c7e9}{advance}} (amrex\+::\+Real time, amrex\+::\+Real dt, int iteration, int ncycle) override
+\item 
+virtual void \mbox{\hyperlink{classCNS_a437a286d7d2a766c471bf87802409c2b}{post\+\_\+timestep}} (int iteration) override
+\item 
+virtual void \mbox{\hyperlink{classCNS_a07f9d07ea33fe1c8664d1bfa8b5c06b3}{post\+Coarse\+Time\+Step}} (Real time) override
+\item 
+virtual void \mbox{\hyperlink{classCNS_a2c9ede97cc46d7838c7084a4ca85403b}{post\+\_\+regrid}} (int lbase, int new\+\_\+finest) override
+\item 
+virtual void \mbox{\hyperlink{classCNS_a20f953cbc7eab1ad056edf1d7b88d798}{error\+Est}} (amrex\+::\+Tag\+Box\+Array \&tb, int clearval, int tagval, amrex\+::\+Real time, int n\+\_\+error\+\_\+buf=0, int ngrow=0) override
+\item 
+\mbox{\hyperlink{classCNS}{CNS}} \& \mbox{\hyperlink{classCNS_a34d41264b8f3718bba17e3da33061a08}{get\+Level}} (int lev)
+\item 
+void \mbox{\hyperlink{classCNS_ab5beee282c4bafb7471c61ae8df0693f}{build\+Metrics}} ()
+\item 
+void \mbox{\hyperlink{classCNS_a096dd2c07de1a5595c25fd5c1ba22a40}{avg\+Down}} ()
+\item 
+void \mbox{\hyperlink{classCNS_a3736ca7a6aa435d07982130e577b9575}{print\+Total}} () const
+\item 
+virtual void \mbox{\hyperlink{classCNS_af8e56d234201c1939529b674f81216c7}{write\+Plot\+File}} (const std\+::string \&dir, std\+::ostream \&os, Vis\+MF\+::\+How how=Vis\+MF\+::\+NFiles) override
+\item 
+virtual void \mbox{\hyperlink{classCNS_a1b5bb1bfca768b5717f52916f4a8ac73}{write\+Plot\+File\+Post}} (const std\+::string \&dir, std\+::ostream \&os) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classCNS_a370b3dd73bd48812261b402df432490f}{read\+\_\+params}} ()
+\item 
+static void \mbox{\hyperlink{classCNS_ac5c1beb8e2c7835b8f4fabf35b041ece}{variable\+Set\+Up}} ()
+\item 
+static void \mbox{\hyperlink{classCNS_afaf1e7769a2d42c40b7e31e41cb79918}{variable\+Clean\+Up}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ amrex\+::\+Flux\+Register $>$ \mbox{\hyperlink{classCNS_ab53b845033e0898cccaeeb5517dac743}{flux\+\_\+reg}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classCNS_ad0df4fc6cc83a0d60e76b81b0dcb9b54}{num\+\_\+state\+\_\+data\+\_\+types}} = 0
+\item 
+static int \mbox{\hyperlink{classCNS_a47da85ac5007c367ac373ec4444c3dd8}{do\+\_\+reflux}} = 1
+\item 
+static bool \mbox{\hyperlink{classCNS_a4ec3344872151dce8c6f5c0ca64b475e}{verbose}} = true
+\item 
+static amrex\+::\+Real \mbox{\hyperlink{classCNS_a2f615df1d2e42a240069f49cfab107d6}{cfl}} = 0.\+0\+\_\+rt
+\item 
+static int \mbox{\hyperlink{classCNS_afac9383090af0763469184958386fb3c}{refine\+\_\+max\+\_\+dengrad\+\_\+lev}} = -\/1
+\item 
+static amrex\+::\+Real \mbox{\hyperlink{classCNS_a0456efc0789d7dcc3cb62970910dc61c}{refine\+\_\+dengrad}} = 1.\+0e10
+\item 
+static amrex\+::\+Real \mbox{\hyperlink{classCNS_a669335d403da47bf62a3de3b4b02d156}{gravity}}
+\item 
+static amrex\+::\+Real \mbox{\hyperlink{classCNS_a8180dca1bb3dba56b021e3b4ed4a3d99}{dt\+\_\+constant}} = 0.\+0\+\_\+rt
+\item 
+static bool \mbox{\hyperlink{classCNS_a79496fce32ac6b504dd6d43744ed5cfe}{dt\+\_\+dynamic}} =false
+\item 
+static int \mbox{\hyperlink{classCNS_ab7845598f894db786aea192baeec4d68}{nstep\+\_\+screen\+\_\+output}} =10
+\item 
+static int \mbox{\hyperlink{classCNS_afe803941c19f0e8cb88aa9859febb042}{flux\+\_\+euler}} =0
+\item 
+static int \mbox{\hyperlink{classCNS_a7f0fb80fb7e2931bfcc047889ff3d246}{art\+\_\+diss}} =0
+\item 
+static int \mbox{\hyperlink{classCNS_a01ee9fbe439d85236126a2744ca60480}{order\+\_\+rk}} =2
+\item 
+static int \mbox{\hyperlink{classCNS_aee30ae574636442b8b9960067463e5b8}{stages\+\_\+rk}} =2
+\item 
+static bool \mbox{\hyperlink{classCNS_a209ec19467dac97fbdeaa7a4d75998df}{rhs\+\_\+euler}} =false
+\item 
+static bool \mbox{\hyperlink{classCNS_a8a2193b4006fbbb9182fe90a5326adea}{rhs\+\_\+visc}} =false
+\item 
+static bool \mbox{\hyperlink{classCNS_a9b96aa1da4a572972abcee5497009c12}{rhs\+\_\+source}} =false
+\item 
+static bool \mbox{\hyperlink{classCNS_a31325aa106f61b233dca9b9cdb80111f}{ib\+\_\+move}} =false
+\item 
+static bool \mbox{\hyperlink{classCNS_ac68860af33d625a26b7f101d25ee6c5d}{plot\+\_\+surf}} =false
+\item 
+static Vector$<$ Multi\+Fab $>$ \mbox{\hyperlink{classCNS_a2f17b575193fdc8cb89d9a1db001913d}{Vd\+Sdt}}
+\item 
+static Vector$<$ Multi\+Fab $>$ \mbox{\hyperlink{classCNS_af6558f9ed8205ea9a1f8d77124478947}{VSborder}}
+\item 
+static Vector$<$ Multi\+Fab $>$ \mbox{\hyperlink{classCNS_afed442446b9f731053ac6cdd32f6b286}{Vprimsmf}}
+\item 
+static Vector$<$ Array$<$ Multi\+Fab, AMREX\+\_\+\+SPACEDIM $>$ $>$ \mbox{\hyperlink{classCNS_a237e6d48f18becf1a6e4ded3a2d347f8}{Vnumflxmf}}
+\item 
+static Vector$<$ Array$<$ Multi\+Fab, AMREX\+\_\+\+SPACEDIM $>$ $>$ \mbox{\hyperlink{classCNS_a02db345a113aa5b4349e662c97a38342}{Vpntvflxmf}}
+\item 
+static PROB\+::\+Prob\+Closures $\ast$ \mbox{\hyperlink{classCNS_a7bb288f0b0048bc12ed8ae26b0155c5d}{h\+\_\+prob\+\_\+closures}} = nullptr
+\item 
+static PROB\+::\+Prob\+Closures $\ast$ \mbox{\hyperlink{classCNS_a5862bbfd9bbddc7613fe7430be497f8e}{d\+\_\+prob\+\_\+closures}} = nullptr
+\item 
+static PROB\+::\+Prob\+Parm $\ast$ \mbox{\hyperlink{classCNS_a337915eb414653768d497a874dcde6ec}{h\+\_\+prob\+\_\+parm}} = nullptr
+\item 
+static PROB\+::\+Prob\+Parm $\ast$ \mbox{\hyperlink{classCNS_a7fd9b3298cf0b8e29c314127e131fa39}{d\+\_\+prob\+\_\+parm}} = nullptr
+\item 
+static BCRec $\ast$ \mbox{\hyperlink{classCNS_ad2039988ea3a60abf9d110554e02d7b8}{h\+\_\+phys\+\_\+bc}} =nullptr
+\item 
+static BCRec $\ast$ \mbox{\hyperlink{classCNS_abeeef8a96dc8d2526704e66719849d31}{d\+\_\+phys\+\_\+bc}} =nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classCNS_ad530b2a17c558b9efc61df863034fe2c}\label{classCNS_ad530b2a17c558b9efc61df863034fe2c}} 
+\index{CNS@{CNS}!StateDataType@{StateDataType}}
+\index{StateDataType@{StateDataType}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{StateDataType}{StateDataType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classCNS_ad530b2a17c558b9efc61df863034fe2c}{CNS\+::\+State\+Data\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{State\_Type@{State\_Type}!CNS@{CNS}}\index{CNS@{CNS}!State\_Type@{State\_Type}}}\mbox{\Hypertarget{classCNS_ad530b2a17c558b9efc61df863034fe2ca64f97ecf29970c745a6d5c6469c6aac7}\label{classCNS_ad530b2a17c558b9efc61df863034fe2ca64f97ecf29970c745a6d5c6469c6aac7}} 
+State\+\_\+\+Type&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cost\_Type@{Cost\_Type}!CNS@{CNS}}\index{CNS@{CNS}!Cost\_Type@{Cost\_Type}}}\mbox{\Hypertarget{classCNS_ad530b2a17c558b9efc61df863034fe2ca991d4e2038989cac4d7294623d3daedb}\label{classCNS_ad530b2a17c558b9efc61df863034fe2ca991d4e2038989cac4d7294623d3daedb}} 
+Cost\+\_\+\+Type&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classCNS_a19db9163ca9729a472a141eef3d7f9af}\label{classCNS_a19db9163ca9729a472a141eef3d7f9af}} 
+\index{CNS@{CNS}!StateVariable@{StateVariable}}
+\index{StateVariable@{StateVariable}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{StateVariable}{StateVariable}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classCNS_a19db9163ca9729a472a141eef3d7f9af}{CNS\+::\+State\+Variable}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Density@{Density}!CNS@{CNS}}\index{CNS@{CNS}!Density@{Density}}}\mbox{\Hypertarget{classCNS_a19db9163ca9729a472a141eef3d7f9afa84b208b6274070582000de605e7beb82}\label{classCNS_a19db9163ca9729a472a141eef3d7f9afa84b208b6274070582000de605e7beb82}} 
+Density&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Xmom@{Xmom}!CNS@{CNS}}\index{CNS@{CNS}!Xmom@{Xmom}}}\mbox{\Hypertarget{classCNS_a19db9163ca9729a472a141eef3d7f9afa2e4c6a35b76a37a45e45a03319ad6484}\label{classCNS_a19db9163ca9729a472a141eef3d7f9afa2e4c6a35b76a37a45e45a03319ad6484}} 
+Xmom&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ymom@{Ymom}!CNS@{CNS}}\index{CNS@{CNS}!Ymom@{Ymom}}}\mbox{\Hypertarget{classCNS_a19db9163ca9729a472a141eef3d7f9afa07bbb939b92605e95a8e56d3c09b4ee8}\label{classCNS_a19db9163ca9729a472a141eef3d7f9afa07bbb939b92605e95a8e56d3c09b4ee8}} 
+Ymom&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Zmom@{Zmom}!CNS@{CNS}}\index{CNS@{CNS}!Zmom@{Zmom}}}\mbox{\Hypertarget{classCNS_a19db9163ca9729a472a141eef3d7f9afad7deee1e9ef51d9e5b8a784280068c27}\label{classCNS_a19db9163ca9729a472a141eef3d7f9afad7deee1e9ef51d9e5b8a784280068c27}} 
+Zmom&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Etot@{Etot}!CNS@{CNS}}\index{CNS@{CNS}!Etot@{Etot}}}\mbox{\Hypertarget{classCNS_a19db9163ca9729a472a141eef3d7f9afaf0f129e644749d3505496718c82e9749}\label{classCNS_a19db9163ca9729a472a141eef3d7f9afaf0f129e644749d3505496718c82e9749}} 
+Etot&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCNS_a1309291650baed4b8037229960fba676}\label{classCNS_a1309291650baed4b8037229960fba676}} 
+\index{CNS@{CNS}!CNS@{CNS}}
+\index{CNS@{CNS}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{CNS()}{CNS()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily CNS\+::\+CNS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCNS_a19d2c5b1f5469e7ec802921e7214f27b}\label{classCNS_a19d2c5b1f5469e7ec802921e7214f27b}} 
+\index{CNS@{CNS}!CNS@{CNS}}
+\index{CNS@{CNS}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{CNS()}{CNS()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily CNS\+::\+CNS (\begin{DoxyParamCaption}\item[{amrex\+::\+Amr \&}]{papa,  }\item[{int}]{lev,  }\item[{const amrex\+::\+Geometry \&}]{level\+\_\+geom,  }\item[{const amrex\+::\+Box\+Array \&}]{bl,  }\item[{const amrex\+::\+Distribution\+Mapping \&}]{dm,  }\item[{amrex\+::\+Real}]{time }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCNS_a48197a1f06cbc4e34eb03884e7ea50b1}\label{classCNS_a48197a1f06cbc4e34eb03884e7ea50b1}} 
+\index{CNS@{CNS}!````~CNS@{$\sim$CNS}}
+\index{````~CNS@{$\sim$CNS}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{$\sim$CNS()}{~CNS()}}
+{\footnotesize\ttfamily CNS\+::$\sim$\+CNS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCNS_a0d9a67eddaa078fcd94c8f7d8e30e9d8}\label{classCNS_a0d9a67eddaa078fcd94c8f7d8e30e9d8}} 
+\index{CNS@{CNS}!CNS@{CNS}}
+\index{CNS@{CNS}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{CNS()}{CNS()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily CNS\+::\+CNS (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCNS}{CNS}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCNS_a4ee2511ec4013744d11067b5f360c7e9}\label{classCNS_a4ee2511ec4013744d11067b5f360c7e9}} 
+\index{CNS@{CNS}!advance@{advance}}
+\index{advance@{advance}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{advance()}{advance()}}
+{\footnotesize\ttfamily Real CNS\+::advance (\begin{DoxyParamCaption}\item[{amrex\+::\+Real}]{time,  }\item[{amrex\+::\+Real}]{dt,  }\item[{int}]{iteration,  }\item[{int}]{ncycle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classCNS_a096dd2c07de1a5595c25fd5c1ba22a40}\label{classCNS_a096dd2c07de1a5595c25fd5c1ba22a40}} 
+\index{CNS@{CNS}!avgDown@{avgDown}}
+\index{avgDown@{avgDown}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{avgDown()}{avgDown()}}
+{\footnotesize\ttfamily void CNS\+::avg\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCNS_ab5beee282c4bafb7471c61ae8df0693f}\label{classCNS_ab5beee282c4bafb7471c61ae8df0693f}} 
+\index{CNS@{CNS}!buildMetrics@{buildMetrics}}
+\index{buildMetrics@{buildMetrics}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{buildMetrics()}{buildMetrics()}}
+{\footnotesize\ttfamily void CNS\+::build\+Metrics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCNS_a8fed302a126d1da6f90eca57589fcb70}\label{classCNS_a8fed302a126d1da6f90eca57589fcb70}} 
+\index{CNS@{CNS}!compute\_rhs@{compute\_rhs}}
+\index{compute\_rhs@{compute\_rhs}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{compute\_rhs()}{compute\_rhs()}}
+{\footnotesize\ttfamily void CNS\+::compute\+\_\+rhs (\begin{DoxyParamCaption}\item[{amrex\+::\+Multi\+Fab \&}]{S,  }\item[{amrex\+::\+Multi\+Fab \&}]{d\+Sdt,  }\item[{amrex\+::\+Real}]{dt,  }\item[{amrex\+::\+Flux\+Register $\ast$}]{fr\+\_\+as\+\_\+crse,  }\item[{amrex\+::\+Flux\+Register $\ast$}]{fr\+\_\+as\+\_\+fine }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCNS_adf1f0571a86308ee1c28a6f89bb6b16c}\label{classCNS_adf1f0571a86308ee1c28a6f89bb6b16c}} 
+\index{CNS@{CNS}!computeInitialDt@{computeInitialDt}}
+\index{computeInitialDt@{computeInitialDt}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{computeInitialDt()}{computeInitialDt()}}
+{\footnotesize\ttfamily void CNS\+::compute\+Initial\+Dt (\begin{DoxyParamCaption}\item[{int}]{finest\+\_\+level,  }\item[{int}]{sub\+\_\+cycle,  }\item[{amrex\+::\+Vector$<$ int $>$ \&}]{n\+\_\+cycle,  }\item[{const amrex\+::\+Vector$<$ amrex\+::\+Int\+Vect $>$ \&}]{ref\+\_\+ratio,  }\item[{amrex\+::\+Vector$<$ amrex\+::\+Real $>$ \&}]{dt\+\_\+level,  }\item[{amrex\+::\+Real}]{stop\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classCNS_a96115d4d8886d4109ae13c6c8a6a144d}\label{classCNS_a96115d4d8886d4109ae13c6c8a6a144d}} 
+\index{CNS@{CNS}!computeNewDt@{computeNewDt}}
+\index{computeNewDt@{computeNewDt}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{computeNewDt()}{computeNewDt()}}
+{\footnotesize\ttfamily void CNS\+::compute\+New\+Dt (\begin{DoxyParamCaption}\item[{int}]{finest\+\_\+level,  }\item[{int}]{sub\+\_\+cycle,  }\item[{amrex\+::\+Vector$<$ int $>$ \&}]{n\+\_\+cycle,  }\item[{const amrex\+::\+Vector$<$ amrex\+::\+Int\+Vect $>$ \&}]{ref\+\_\+ratio,  }\item[{amrex\+::\+Vector$<$ amrex\+::\+Real $>$ \&}]{dt\+\_\+min,  }\item[{amrex\+::\+Vector$<$ amrex\+::\+Real $>$ \&}]{dt\+\_\+level,  }\item[{amrex\+::\+Real}]{stop\+\_\+time,  }\item[{int}]{post\+\_\+regrid\+\_\+flag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classCNS_afa3a2058837e1173ece5bf1eb1750a0a}\label{classCNS_afa3a2058837e1173ece5bf1eb1750a0a}} 
+\index{CNS@{CNS}!computeTemp@{computeTemp}}
+\index{computeTemp@{computeTemp}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{computeTemp()}{computeTemp()}}
+{\footnotesize\ttfamily void CNS\+::compute\+Temp (\begin{DoxyParamCaption}\item[{amrex\+::\+Multi\+Fab \&}]{State,  }\item[{int}]{ng }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCNS_a20f953cbc7eab1ad056edf1d7b88d798}\label{classCNS_a20f953cbc7eab1ad056edf1d7b88d798}} 
+\index{CNS@{CNS}!errorEst@{errorEst}}
+\index{errorEst@{errorEst}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{errorEst()}{errorEst()}}
+{\footnotesize\ttfamily void CNS\+::error\+Est (\begin{DoxyParamCaption}\item[{amrex\+::\+Tag\+Box\+Array \&}]{tb,  }\item[{int}]{clearval,  }\item[{int}]{tagval,  }\item[{amrex\+::\+Real}]{time,  }\item[{int}]{n\+\_\+error\+\_\+buf = {\ttfamily 0},  }\item[{int}]{ngrow = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classCNS_a2ea82ccf446433baf83c3bdd30e263b2}\label{classCNS_a2ea82ccf446433baf83c3bdd30e263b2}} 
+\index{CNS@{CNS}!estTimeStep@{estTimeStep}}
+\index{estTimeStep@{estTimeStep}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{estTimeStep()}{estTimeStep()}}
+{\footnotesize\ttfamily Real CNS\+::est\+Time\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCNS_a34d41264b8f3718bba17e3da33061a08}\label{classCNS_a34d41264b8f3718bba17e3da33061a08}} 
+\index{CNS@{CNS}!getLevel@{getLevel}}
+\index{getLevel@{getLevel}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{getLevel()}{getLevel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCNS}{CNS}}\& CNS\+::get\+Level (\begin{DoxyParamCaption}\item[{int}]{lev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classCNS_aa81e96ae79104179b77643f3ae8ca78c}\label{classCNS_aa81e96ae79104179b77643f3ae8ca78c}} 
+\index{CNS@{CNS}!init@{init}}
+\index{init@{init}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void CNS\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classCNS_a82afea16bd86047ee71cd9a2510deff4}\label{classCNS_a82afea16bd86047ee71cd9a2510deff4}} 
+\index{CNS@{CNS}!init@{init}}
+\index{init@{init}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void CNS\+::init (\begin{DoxyParamCaption}\item[{amrex\+::\+Amr\+Level \&}]{old }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\mbox{\Hypertarget{classCNS_a9fe7352c76bebcd0ac0e6dcb0e48e366}\label{classCNS_a9fe7352c76bebcd0ac0e6dcb0e48e366}} 
+\index{CNS@{CNS}!initData@{initData}}
+\index{initData@{initData}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{initData()}{initData()}}
+{\footnotesize\ttfamily void CNS\+::init\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classCNS_aaa89010c03f9ab7da5302e775a711329}\label{classCNS_aaa89010c03f9ab7da5302e775a711329}} 
+\index{CNS@{CNS}!initialTimeStep@{initialTimeStep}}
+\index{initialTimeStep@{initialTimeStep}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{initialTimeStep()}{initialTimeStep()}}
+{\footnotesize\ttfamily amrex\+::\+Real CNS\+::initial\+Time\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCNS_a005a97d53770bc9775328fff6295fea4}\label{classCNS_a005a97d53770bc9775328fff6295fea4}} 
+\index{CNS@{CNS}!operator=@{operator=}}
+\index{operator=@{operator=}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCNS}{CNS}}\& CNS\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCNS}{CNS}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classCNS_a54a545df481d31edfbcf5f1e145c10c9}\label{classCNS_a54a545df481d31edfbcf5f1e145c10c9}} 
+\index{CNS@{CNS}!post\_init@{post\_init}}
+\index{post\_init@{post\_init}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{post\_init()}{post\_init()}}
+{\footnotesize\ttfamily void CNS\+::post\+\_\+init (\begin{DoxyParamCaption}\item[{amrex\+::\+Real}]{stop\+\_\+time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classCNS_a2c9ede97cc46d7838c7084a4ca85403b}\label{classCNS_a2c9ede97cc46d7838c7084a4ca85403b}} 
+\index{CNS@{CNS}!post\_regrid@{post\_regrid}}
+\index{post\_regrid@{post\_regrid}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{post\_regrid()}{post\_regrid()}}
+{\footnotesize\ttfamily void CNS\+::post\+\_\+regrid (\begin{DoxyParamCaption}\item[{int}]{lbase,  }\item[{int}]{new\+\_\+finest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classCNS_a437a286d7d2a766c471bf87802409c2b}\label{classCNS_a437a286d7d2a766c471bf87802409c2b}} 
+\index{CNS@{CNS}!post\_timestep@{post\_timestep}}
+\index{post\_timestep@{post\_timestep}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{post\_timestep()}{post\_timestep()}}
+{\footnotesize\ttfamily void CNS\+::post\+\_\+timestep (\begin{DoxyParamCaption}\item[{int}]{iteration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classCNS_a07f9d07ea33fe1c8664d1bfa8b5c06b3}\label{classCNS_a07f9d07ea33fe1c8664d1bfa8b5c06b3}} 
+\index{CNS@{CNS}!postCoarseTimeStep@{postCoarseTimeStep}}
+\index{postCoarseTimeStep@{postCoarseTimeStep}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{postCoarseTimeStep()}{postCoarseTimeStep()}}
+{\footnotesize\ttfamily void CNS\+::post\+Coarse\+Time\+Step (\begin{DoxyParamCaption}\item[{Real}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classCNS_a3736ca7a6aa435d07982130e577b9575}\label{classCNS_a3736ca7a6aa435d07982130e577b9575}} 
+\index{CNS@{CNS}!printTotal@{printTotal}}
+\index{printTotal@{printTotal}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{printTotal()}{printTotal()}}
+{\footnotesize\ttfamily void CNS\+::print\+Total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classCNS_a370b3dd73bd48812261b402df432490f}\label{classCNS_a370b3dd73bd48812261b402df432490f}} 
+\index{CNS@{CNS}!read\_params@{read\_params}}
+\index{read\_params@{read\_params}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{read\_params()}{read\_params()}}
+{\footnotesize\ttfamily void CNS\+::read\+\_\+params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_afaf1e7769a2d42c40b7e31e41cb79918}\label{classCNS_afaf1e7769a2d42c40b7e31e41cb79918}} 
+\index{CNS@{CNS}!variableCleanUp@{variableCleanUp}}
+\index{variableCleanUp@{variableCleanUp}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{variableCleanUp()}{variableCleanUp()}}
+{\footnotesize\ttfamily void CNS\+::variable\+Clean\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_ac5c1beb8e2c7835b8f4fabf35b041ece}\label{classCNS_ac5c1beb8e2c7835b8f4fabf35b041ece}} 
+\index{CNS@{CNS}!variableSetUp@{variableSetUp}}
+\index{variableSetUp@{variableSetUp}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{variableSetUp()}{variableSetUp()}}
+{\footnotesize\ttfamily void CNS\+::variable\+Set\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_af8e56d234201c1939529b674f81216c7}\label{classCNS_af8e56d234201c1939529b674f81216c7}} 
+\index{CNS@{CNS}!writePlotFile@{writePlotFile}}
+\index{writePlotFile@{writePlotFile}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{writePlotFile()}{writePlotFile()}}
+{\footnotesize\ttfamily void CNS\+::write\+Plot\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{dir,  }\item[{std\+::ostream \&}]{os,  }\item[{Vis\+MF\+::\+How}]{how = {\ttfamily VisMF\+:\+:NFiles} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{classCNS_a1b5bb1bfca768b5717f52916f4a8ac73}\label{classCNS_a1b5bb1bfca768b5717f52916f4a8ac73}} 
+\index{CNS@{CNS}!writePlotFilePost@{writePlotFilePost}}
+\index{writePlotFilePost@{writePlotFilePost}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{writePlotFilePost()}{writePlotFilePost()}}
+{\footnotesize\ttfamily void CNS\+::write\+Plot\+File\+Post (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{dir,  }\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCNS_a7f0fb80fb7e2931bfcc047889ff3d246}\label{classCNS_a7f0fb80fb7e2931bfcc047889ff3d246}} 
+\index{CNS@{CNS}!art\_diss@{art\_diss}}
+\index{art\_diss@{art\_diss}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{art\_diss}{art\_diss}}
+{\footnotesize\ttfamily int CNS\+::art\+\_\+diss =0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_a2f615df1d2e42a240069f49cfab107d6}\label{classCNS_a2f615df1d2e42a240069f49cfab107d6}} 
+\index{CNS@{CNS}!cfl@{cfl}}
+\index{cfl@{cfl}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{cfl}{cfl}}
+{\footnotesize\ttfamily Real CNS\+::cfl = 0.\+0\+\_\+rt\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_abeeef8a96dc8d2526704e66719849d31}\label{classCNS_abeeef8a96dc8d2526704e66719849d31}} 
+\index{CNS@{CNS}!d\_phys\_bc@{d\_phys\_bc}}
+\index{d\_phys\_bc@{d\_phys\_bc}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{d\_phys\_bc}{d\_phys\_bc}}
+{\footnotesize\ttfamily BCRec $\ast$ CNS\+::d\+\_\+phys\+\_\+bc =nullptr\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_a5862bbfd9bbddc7613fe7430be497f8e}\label{classCNS_a5862bbfd9bbddc7613fe7430be497f8e}} 
+\index{CNS@{CNS}!d\_prob\_closures@{d\_prob\_closures}}
+\index{d\_prob\_closures@{d\_prob\_closures}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{d\_prob\_closures}{d\_prob\_closures}}
+{\footnotesize\ttfamily PROB\+::\+Prob\+Closures $\ast$ CNS\+::d\+\_\+prob\+\_\+closures = nullptr\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_a7fd9b3298cf0b8e29c314127e131fa39}\label{classCNS_a7fd9b3298cf0b8e29c314127e131fa39}} 
+\index{CNS@{CNS}!d\_prob\_parm@{d\_prob\_parm}}
+\index{d\_prob\_parm@{d\_prob\_parm}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{d\_prob\_parm}{d\_prob\_parm}}
+{\footnotesize\ttfamily PROB\+::\+Prob\+Parm $\ast$ CNS\+::d\+\_\+prob\+\_\+parm = nullptr\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_a47da85ac5007c367ac373ec4444c3dd8}\label{classCNS_a47da85ac5007c367ac373ec4444c3dd8}} 
+\index{CNS@{CNS}!do\_reflux@{do\_reflux}}
+\index{do\_reflux@{do\_reflux}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{do\_reflux}{do\_reflux}}
+{\footnotesize\ttfamily int CNS\+::do\+\_\+reflux = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_a8180dca1bb3dba56b021e3b4ed4a3d99}\label{classCNS_a8180dca1bb3dba56b021e3b4ed4a3d99}} 
+\index{CNS@{CNS}!dt\_constant@{dt\_constant}}
+\index{dt\_constant@{dt\_constant}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{dt\_constant}{dt\_constant}}
+{\footnotesize\ttfamily Real CNS\+::dt\+\_\+constant = 0.\+0\+\_\+rt\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_a79496fce32ac6b504dd6d43744ed5cfe}\label{classCNS_a79496fce32ac6b504dd6d43744ed5cfe}} 
+\index{CNS@{CNS}!dt\_dynamic@{dt\_dynamic}}
+\index{dt\_dynamic@{dt\_dynamic}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{dt\_dynamic}{dt\_dynamic}}
+{\footnotesize\ttfamily bool CNS\+::dt\+\_\+dynamic =false\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_afe803941c19f0e8cb88aa9859febb042}\label{classCNS_afe803941c19f0e8cb88aa9859febb042}} 
+\index{CNS@{CNS}!flux\_euler@{flux\_euler}}
+\index{flux\_euler@{flux\_euler}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{flux\_euler}{flux\_euler}}
+{\footnotesize\ttfamily int CNS\+::flux\+\_\+euler =0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_ab53b845033e0898cccaeeb5517dac743}\label{classCNS_ab53b845033e0898cccaeeb5517dac743}} 
+\index{CNS@{CNS}!flux\_reg@{flux\_reg}}
+\index{flux\_reg@{flux\_reg}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{flux\_reg}{flux\_reg}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$amrex\+::\+Flux\+Register$>$ CNS\+::flux\+\_\+reg}
+
+\mbox{\Hypertarget{classCNS_a669335d403da47bf62a3de3b4b02d156}\label{classCNS_a669335d403da47bf62a3de3b4b02d156}} 
+\index{CNS@{CNS}!gravity@{gravity}}
+\index{gravity@{gravity}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{gravity}{gravity}}
+{\footnotesize\ttfamily amrex\+::\+Real CNS\+::gravity\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_ad2039988ea3a60abf9d110554e02d7b8}\label{classCNS_ad2039988ea3a60abf9d110554e02d7b8}} 
+\index{CNS@{CNS}!h\_phys\_bc@{h\_phys\_bc}}
+\index{h\_phys\_bc@{h\_phys\_bc}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{h\_phys\_bc}{h\_phys\_bc}}
+{\footnotesize\ttfamily BCRec $\ast$ CNS\+::h\+\_\+phys\+\_\+bc =nullptr\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_a7bb288f0b0048bc12ed8ae26b0155c5d}\label{classCNS_a7bb288f0b0048bc12ed8ae26b0155c5d}} 
+\index{CNS@{CNS}!h\_prob\_closures@{h\_prob\_closures}}
+\index{h\_prob\_closures@{h\_prob\_closures}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{h\_prob\_closures}{h\_prob\_closures}}
+{\footnotesize\ttfamily PROB\+::\+Prob\+Closures $\ast$ CNS\+::h\+\_\+prob\+\_\+closures = nullptr\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_a337915eb414653768d497a874dcde6ec}\label{classCNS_a337915eb414653768d497a874dcde6ec}} 
+\index{CNS@{CNS}!h\_prob\_parm@{h\_prob\_parm}}
+\index{h\_prob\_parm@{h\_prob\_parm}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{h\_prob\_parm}{h\_prob\_parm}}
+{\footnotesize\ttfamily PROB\+::\+Prob\+Parm $\ast$ CNS\+::h\+\_\+prob\+\_\+parm = nullptr\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_a31325aa106f61b233dca9b9cdb80111f}\label{classCNS_a31325aa106f61b233dca9b9cdb80111f}} 
+\index{CNS@{CNS}!ib\_move@{ib\_move}}
+\index{ib\_move@{ib\_move}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{ib\_move}{ib\_move}}
+{\footnotesize\ttfamily bool CNS\+::ib\+\_\+move =false\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_ab7845598f894db786aea192baeec4d68}\label{classCNS_ab7845598f894db786aea192baeec4d68}} 
+\index{CNS@{CNS}!nstep\_screen\_output@{nstep\_screen\_output}}
+\index{nstep\_screen\_output@{nstep\_screen\_output}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{nstep\_screen\_output}{nstep\_screen\_output}}
+{\footnotesize\ttfamily int CNS\+::nstep\+\_\+screen\+\_\+output =10\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_ad0df4fc6cc83a0d60e76b81b0dcb9b54}\label{classCNS_ad0df4fc6cc83a0d60e76b81b0dcb9b54}} 
+\index{CNS@{CNS}!num\_state\_data\_types@{num\_state\_data\_types}}
+\index{num\_state\_data\_types@{num\_state\_data\_types}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{num\_state\_data\_types}{num\_state\_data\_types}}
+{\footnotesize\ttfamily int CNS\+::num\+\_\+state\+\_\+data\+\_\+types = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_a01ee9fbe439d85236126a2744ca60480}\label{classCNS_a01ee9fbe439d85236126a2744ca60480}} 
+\index{CNS@{CNS}!order\_rk@{order\_rk}}
+\index{order\_rk@{order\_rk}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{order\_rk}{order\_rk}}
+{\footnotesize\ttfamily int CNS\+::order\+\_\+rk =2\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_ac68860af33d625a26b7f101d25ee6c5d}\label{classCNS_ac68860af33d625a26b7f101d25ee6c5d}} 
+\index{CNS@{CNS}!plot\_surf@{plot\_surf}}
+\index{plot\_surf@{plot\_surf}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{plot\_surf}{plot\_surf}}
+{\footnotesize\ttfamily bool CNS\+::plot\+\_\+surf =false\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_a0456efc0789d7dcc3cb62970910dc61c}\label{classCNS_a0456efc0789d7dcc3cb62970910dc61c}} 
+\index{CNS@{CNS}!refine\_dengrad@{refine\_dengrad}}
+\index{refine\_dengrad@{refine\_dengrad}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{refine\_dengrad}{refine\_dengrad}}
+{\footnotesize\ttfamily Real CNS\+::refine\+\_\+dengrad = 1.\+0e10\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_afac9383090af0763469184958386fb3c}\label{classCNS_afac9383090af0763469184958386fb3c}} 
+\index{CNS@{CNS}!refine\_max\_dengrad\_lev@{refine\_max\_dengrad\_lev}}
+\index{refine\_max\_dengrad\_lev@{refine\_max\_dengrad\_lev}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{refine\_max\_dengrad\_lev}{refine\_max\_dengrad\_lev}}
+{\footnotesize\ttfamily int CNS\+::refine\+\_\+max\+\_\+dengrad\+\_\+lev = -\/1\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_a209ec19467dac97fbdeaa7a4d75998df}\label{classCNS_a209ec19467dac97fbdeaa7a4d75998df}} 
+\index{CNS@{CNS}!rhs\_euler@{rhs\_euler}}
+\index{rhs\_euler@{rhs\_euler}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{rhs\_euler}{rhs\_euler}}
+{\footnotesize\ttfamily bool CNS\+::rhs\+\_\+euler =false\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_a9b96aa1da4a572972abcee5497009c12}\label{classCNS_a9b96aa1da4a572972abcee5497009c12}} 
+\index{CNS@{CNS}!rhs\_source@{rhs\_source}}
+\index{rhs\_source@{rhs\_source}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{rhs\_source}{rhs\_source}}
+{\footnotesize\ttfamily bool CNS\+::rhs\+\_\+source =false\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_a8a2193b4006fbbb9182fe90a5326adea}\label{classCNS_a8a2193b4006fbbb9182fe90a5326adea}} 
+\index{CNS@{CNS}!rhs\_visc@{rhs\_visc}}
+\index{rhs\_visc@{rhs\_visc}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{rhs\_visc}{rhs\_visc}}
+{\footnotesize\ttfamily bool CNS\+::rhs\+\_\+visc =false\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_aee30ae574636442b8b9960067463e5b8}\label{classCNS_aee30ae574636442b8b9960067463e5b8}} 
+\index{CNS@{CNS}!stages\_rk@{stages\_rk}}
+\index{stages\_rk@{stages\_rk}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{stages\_rk}{stages\_rk}}
+{\footnotesize\ttfamily int CNS\+::stages\+\_\+rk =2\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_a2f17b575193fdc8cb89d9a1db001913d}\label{classCNS_a2f17b575193fdc8cb89d9a1db001913d}} 
+\index{CNS@{CNS}!VdSdt@{VdSdt}}
+\index{VdSdt@{VdSdt}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{VdSdt}{VdSdt}}
+{\footnotesize\ttfamily Vector$<$ Multi\+Fab $>$ CNS\+::\+Vd\+Sdt\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_a4ec3344872151dce8c6f5c0ca64b475e}\label{classCNS_a4ec3344872151dce8c6f5c0ca64b475e}} 
+\index{CNS@{CNS}!verbose@{verbose}}
+\index{verbose@{verbose}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{verbose}{verbose}}
+{\footnotesize\ttfamily bool CNS\+::verbose = true\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_a237e6d48f18becf1a6e4ded3a2d347f8}\label{classCNS_a237e6d48f18becf1a6e4ded3a2d347f8}} 
+\index{CNS@{CNS}!Vnumflxmf@{Vnumflxmf}}
+\index{Vnumflxmf@{Vnumflxmf}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{Vnumflxmf}{Vnumflxmf}}
+{\footnotesize\ttfamily Vector$<$ Array$<$ Multi\+Fab, AMREX\+\_\+\+SPACEDIM $>$ $>$ CNS\+::\+Vnumflxmf\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_a02db345a113aa5b4349e662c97a38342}\label{classCNS_a02db345a113aa5b4349e662c97a38342}} 
+\index{CNS@{CNS}!Vpntvflxmf@{Vpntvflxmf}}
+\index{Vpntvflxmf@{Vpntvflxmf}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{Vpntvflxmf}{Vpntvflxmf}}
+{\footnotesize\ttfamily Vector$<$ Array$<$ Multi\+Fab, AMREX\+\_\+\+SPACEDIM $>$ $>$ CNS\+::\+Vpntvflxmf\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_afed442446b9f731053ac6cdd32f6b286}\label{classCNS_afed442446b9f731053ac6cdd32f6b286}} 
+\index{CNS@{CNS}!Vprimsmf@{Vprimsmf}}
+\index{Vprimsmf@{Vprimsmf}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{Vprimsmf}{Vprimsmf}}
+{\footnotesize\ttfamily Vector$<$ Multi\+Fab $>$ CNS\+::\+Vprimsmf\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classCNS_af6558f9ed8205ea9a1f8d77124478947}\label{classCNS_af6558f9ed8205ea9a1f8d77124478947}} 
+\index{CNS@{CNS}!VSborder@{VSborder}}
+\index{VSborder@{VSborder}!CNS@{CNS}}
+\doxysubsubsection{\texorpdfstring{VSborder}{VSborder}}
+{\footnotesize\ttfamily Vector$<$ Multi\+Fab $>$ CNS\+::\+VSborder\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/media/monal/main/code/amrsolver1/src/\mbox{\hyperlink{CNS_8h}{CNS.\+h}}\item 
+/media/monal/main/code/amrsolver1/src/\mbox{\hyperlink{CNS_8cpp}{CNS.\+cpp}}\item 
+/media/monal/main/code/amrsolver1/src/set/\mbox{\hyperlink{CNS__setup_8cpp}{CNS\+\_\+setup.\+cpp}}\item 
+/media/monal/main/code/amrsolver1/src/tim/\mbox{\hyperlink{CNS__advance_8cpp}{CNS\+\_\+advance.\+cpp}}\end{DoxyCompactItemize}

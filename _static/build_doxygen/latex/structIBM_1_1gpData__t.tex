@@ -1,0 +1,146 @@
+\hypertarget{structIBM_1_1gpData__t}{}\doxysection{IBM\+::gp\+Data\+\_\+t Struct Reference}
+\label{structIBM_1_1gpData__t}\index{IBM::gpData\_t@{IBM::gpData\_t}}
+
+
+{\ttfamily \#include $<$IBM.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structIBM_1_1gpData__t_a2dcf566c5d9c84b871125e70fade28aa}{gp\+Data\+\_\+t}} ()
+\item 
+void \mbox{\hyperlink{structIBM_1_1gpData__t_a60be254d2dd72f7720c8d80683e456c4}{resize}} (int n)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structIBM_1_1gpData__t_a4ffba4d4b82e351308a38c852053a415}{ngps}}
+\item 
+Vector$<$ \mbox{\hyperlink{namespaceIBM_a7ae8422f8b42c8d6e43ac05822de0904}{Point\+\_\+and\+\_\+primitive\+\_\+id}} $>$ \mbox{\hyperlink{structIBM_1_1gpData__t_af34569ede451cac3d84ddb1e1ca0584b}{closest\+\_\+cgal}}
+\item 
+Gpu\+::\+Managed\+Vector$<$ Array1D$<$ int, 0, AMREX\+\_\+\+SPACEDIM-\/1 $>$ $>$ \mbox{\hyperlink{structIBM_1_1gpData__t_ac2a1f182ea611fd539d30b0e37d49707}{gp\+\_\+ijk}}
+\item 
+Gpu\+::\+Managed\+Vector$<$ Array1D$<$ Real, 0, AMREX\+\_\+\+SPACEDIM-\/1 $>$ $>$ \mbox{\hyperlink{structIBM_1_1gpData__t_a5af70594cdc20425ceb635b422ed8b65}{normal}}
+\item 
+Gpu\+::\+Managed\+Vector$<$ Array1D$<$ Real, 0, AMREX\+\_\+\+SPACEDIM-\/1 $>$ $>$ \mbox{\hyperlink{structIBM_1_1gpData__t_a096723e1270e4fc1d292567e9f56dd77}{tangent1}}
+\item 
+Gpu\+::\+Managed\+Vector$<$ Array1D$<$ Real, 0, AMREX\+\_\+\+SPACEDIM-\/1 $>$ $>$ \mbox{\hyperlink{structIBM_1_1gpData__t_a1fc9c2eddcfe6eb77598be3878e97fc5}{tangent2}}
+\item 
+Gpu\+::\+Managed\+Vector$<$ Array1D$<$ Real, 0, AMREX\+\_\+\+SPACEDIM-\/1 $>$ $>$ \mbox{\hyperlink{structIBM_1_1gpData__t_a36cfbf4d4bd1c2369be07646b49cf80a}{ib\+\_\+xyz}}
+\item 
+Gpu\+::\+Managed\+Vector$<$ Real $>$ \mbox{\hyperlink{structIBM_1_1gpData__t_ab130b8cdca7247fb7c9e7710f61d6973}{dis\+GP}}
+\item 
+Gpu\+::\+Managed\+Vector$<$ Real $>$ \mbox{\hyperlink{structIBM_1_1gpData__t_a614060371c2f6b5bf7e023b126bb9de3}{dis\+IM}}
+\item 
+Gpu\+::\+Managed\+Vector$<$ Array2D$<$ Real, 0, \mbox{\hyperlink{IBM_8h_aa3bb3b5f8fcd8b028b753db498e5c2ef}{NIMPS}}-\/1, 0, AMREX\+\_\+\+SPACEDIM-\/1 $>$ $>$ \mbox{\hyperlink{structIBM_1_1gpData__t_a91e734453ba5a00bdc5d7ee769175bbb}{imp\+\_\+xyz}}
+\item 
+Gpu\+::\+Managed\+Vector$<$ Array2D$<$ int, 0, \mbox{\hyperlink{IBM_8h_aa3bb3b5f8fcd8b028b753db498e5c2ef}{NIMPS}}-\/1, 0, AMREX\+\_\+\+SPACEDIM-\/1 $>$ $>$ \mbox{\hyperlink{structIBM_1_1gpData__t_a47dd83fc0c0bbfa7b887cbfda464d6a1}{imp\+\_\+ijk}}
+\item 
+Gpu\+::\+Managed\+Vector$<$ Array2D$<$ Real, 0, \mbox{\hyperlink{IBM_8h_aa3bb3b5f8fcd8b028b753db498e5c2ef}{NIMPS}}-\/1, 0, 7 $>$ $>$ \mbox{\hyperlink{structIBM_1_1gpData__t_afb4b7e71c94d2642ffeed1dfc726c735}{imp\+\_\+ipweights}}
+\item 
+Gpu\+::\+Managed\+Vector$<$ Array1D$<$ int, 0, AMREX\+\_\+\+SPACEDIM-\/1 $>$ $>$ \mbox{\hyperlink{structIBM_1_1gpData__t_adef7a3cd3e3d61fad726f8ab600a814f}{index\+Cube}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structIBM_1_1gpData__t_a2dcf566c5d9c84b871125e70fade28aa}\label{structIBM_1_1gpData__t_a2dcf566c5d9c84b871125e70fade28aa}} 
+\index{IBM::gpData\_t@{IBM::gpData\_t}!gpData\_t@{gpData\_t}}
+\index{gpData\_t@{gpData\_t}!IBM::gpData\_t@{IBM::gpData\_t}}
+\doxysubsubsection{\texorpdfstring{gpData\_t()}{gpData\_t()}}
+{\footnotesize\ttfamily IBM\+::gp\+Data\+\_\+t\+::gp\+Data\+\_\+t (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structIBM_1_1gpData__t_a60be254d2dd72f7720c8d80683e456c4}\label{structIBM_1_1gpData__t_a60be254d2dd72f7720c8d80683e456c4}} 
+\index{IBM::gpData\_t@{IBM::gpData\_t}!resize@{resize}}
+\index{resize@{resize}!IBM::gpData\_t@{IBM::gpData\_t}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void IBM\+::gp\+Data\+\_\+t\+::resize (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structIBM_1_1gpData__t_af34569ede451cac3d84ddb1e1ca0584b}\label{structIBM_1_1gpData__t_af34569ede451cac3d84ddb1e1ca0584b}} 
+\index{IBM::gpData\_t@{IBM::gpData\_t}!closest\_cgal@{closest\_cgal}}
+\index{closest\_cgal@{closest\_cgal}!IBM::gpData\_t@{IBM::gpData\_t}}
+\doxysubsubsection{\texorpdfstring{closest\_cgal}{closest\_cgal}}
+{\footnotesize\ttfamily Vector$<$\mbox{\hyperlink{namespaceIBM_a7ae8422f8b42c8d6e43ac05822de0904}{Point\+\_\+and\+\_\+primitive\+\_\+id}}$>$ IBM\+::gp\+Data\+\_\+t\+::closest\+\_\+cgal}
+
+\mbox{\Hypertarget{structIBM_1_1gpData__t_ab130b8cdca7247fb7c9e7710f61d6973}\label{structIBM_1_1gpData__t_ab130b8cdca7247fb7c9e7710f61d6973}} 
+\index{IBM::gpData\_t@{IBM::gpData\_t}!disGP@{disGP}}
+\index{disGP@{disGP}!IBM::gpData\_t@{IBM::gpData\_t}}
+\doxysubsubsection{\texorpdfstring{disGP}{disGP}}
+{\footnotesize\ttfamily Gpu\+::\+Managed\+Vector$<$Real$>$ IBM\+::gp\+Data\+\_\+t\+::dis\+GP}
+
+\mbox{\Hypertarget{structIBM_1_1gpData__t_a614060371c2f6b5bf7e023b126bb9de3}\label{structIBM_1_1gpData__t_a614060371c2f6b5bf7e023b126bb9de3}} 
+\index{IBM::gpData\_t@{IBM::gpData\_t}!disIM@{disIM}}
+\index{disIM@{disIM}!IBM::gpData\_t@{IBM::gpData\_t}}
+\doxysubsubsection{\texorpdfstring{disIM}{disIM}}
+{\footnotesize\ttfamily Gpu\+::\+Managed\+Vector$<$Real$>$ IBM\+::gp\+Data\+\_\+t\+::dis\+IM}
+
+\mbox{\Hypertarget{structIBM_1_1gpData__t_ac2a1f182ea611fd539d30b0e37d49707}\label{structIBM_1_1gpData__t_ac2a1f182ea611fd539d30b0e37d49707}} 
+\index{IBM::gpData\_t@{IBM::gpData\_t}!gp\_ijk@{gp\_ijk}}
+\index{gp\_ijk@{gp\_ijk}!IBM::gpData\_t@{IBM::gpData\_t}}
+\doxysubsubsection{\texorpdfstring{gp\_ijk}{gp\_ijk}}
+{\footnotesize\ttfamily Gpu\+::\+Managed\+Vector$<$Array1D$<$int,0,AMREX\+\_\+\+SPACEDIM-\/1$>$ $>$ IBM\+::gp\+Data\+\_\+t\+::gp\+\_\+ijk}
+
+\mbox{\Hypertarget{structIBM_1_1gpData__t_a36cfbf4d4bd1c2369be07646b49cf80a}\label{structIBM_1_1gpData__t_a36cfbf4d4bd1c2369be07646b49cf80a}} 
+\index{IBM::gpData\_t@{IBM::gpData\_t}!ib\_xyz@{ib\_xyz}}
+\index{ib\_xyz@{ib\_xyz}!IBM::gpData\_t@{IBM::gpData\_t}}
+\doxysubsubsection{\texorpdfstring{ib\_xyz}{ib\_xyz}}
+{\footnotesize\ttfamily Gpu\+::\+Managed\+Vector$<$Array1D$<$Real,0,AMREX\+\_\+\+SPACEDIM-\/1$>$ $>$ IBM\+::gp\+Data\+\_\+t\+::ib\+\_\+xyz}
+
+\mbox{\Hypertarget{structIBM_1_1gpData__t_a47dd83fc0c0bbfa7b887cbfda464d6a1}\label{structIBM_1_1gpData__t_a47dd83fc0c0bbfa7b887cbfda464d6a1}} 
+\index{IBM::gpData\_t@{IBM::gpData\_t}!imp\_ijk@{imp\_ijk}}
+\index{imp\_ijk@{imp\_ijk}!IBM::gpData\_t@{IBM::gpData\_t}}
+\doxysubsubsection{\texorpdfstring{imp\_ijk}{imp\_ijk}}
+{\footnotesize\ttfamily Gpu\+::\+Managed\+Vector$<$Array2D$<$int, 0,\mbox{\hyperlink{IBM_8h_aa3bb3b5f8fcd8b028b753db498e5c2ef}{NIMPS}}-\/1,0,AMREX\+\_\+\+SPACEDIM-\/1$>$ $>$ IBM\+::gp\+Data\+\_\+t\+::imp\+\_\+ijk}
+
+\mbox{\Hypertarget{structIBM_1_1gpData__t_afb4b7e71c94d2642ffeed1dfc726c735}\label{structIBM_1_1gpData__t_afb4b7e71c94d2642ffeed1dfc726c735}} 
+\index{IBM::gpData\_t@{IBM::gpData\_t}!imp\_ipweights@{imp\_ipweights}}
+\index{imp\_ipweights@{imp\_ipweights}!IBM::gpData\_t@{IBM::gpData\_t}}
+\doxysubsubsection{\texorpdfstring{imp\_ipweights}{imp\_ipweights}}
+{\footnotesize\ttfamily Gpu\+::\+Managed\+Vector$<$Array2D$<$Real,0,\mbox{\hyperlink{IBM_8h_aa3bb3b5f8fcd8b028b753db498e5c2ef}{NIMPS}}-\/1,0,7$>$ $>$ IBM\+::gp\+Data\+\_\+t\+::imp\+\_\+ipweights}
+
+\mbox{\Hypertarget{structIBM_1_1gpData__t_a91e734453ba5a00bdc5d7ee769175bbb}\label{structIBM_1_1gpData__t_a91e734453ba5a00bdc5d7ee769175bbb}} 
+\index{IBM::gpData\_t@{IBM::gpData\_t}!imp\_xyz@{imp\_xyz}}
+\index{imp\_xyz@{imp\_xyz}!IBM::gpData\_t@{IBM::gpData\_t}}
+\doxysubsubsection{\texorpdfstring{imp\_xyz}{imp\_xyz}}
+{\footnotesize\ttfamily Gpu\+::\+Managed\+Vector$<$Array2D$<$Real,0,\mbox{\hyperlink{IBM_8h_aa3bb3b5f8fcd8b028b753db498e5c2ef}{NIMPS}}-\/1,0,AMREX\+\_\+\+SPACEDIM-\/1$>$ $>$ IBM\+::gp\+Data\+\_\+t\+::imp\+\_\+xyz}
+
+\mbox{\Hypertarget{structIBM_1_1gpData__t_adef7a3cd3e3d61fad726f8ab600a814f}\label{structIBM_1_1gpData__t_adef7a3cd3e3d61fad726f8ab600a814f}} 
+\index{IBM::gpData\_t@{IBM::gpData\_t}!indexCube@{indexCube}}
+\index{indexCube@{indexCube}!IBM::gpData\_t@{IBM::gpData\_t}}
+\doxysubsubsection{\texorpdfstring{indexCube}{indexCube}}
+{\footnotesize\ttfamily Gpu\+::\+Managed\+Vector$<$Array1D$<$int,0,AMREX\+\_\+\+SPACEDIM-\/1$>$ $>$ IBM\+::gp\+Data\+\_\+t\+::index\+Cube}
+
+\mbox{\Hypertarget{structIBM_1_1gpData__t_a4ffba4d4b82e351308a38c852053a415}\label{structIBM_1_1gpData__t_a4ffba4d4b82e351308a38c852053a415}} 
+\index{IBM::gpData\_t@{IBM::gpData\_t}!ngps@{ngps}}
+\index{ngps@{ngps}!IBM::gpData\_t@{IBM::gpData\_t}}
+\doxysubsubsection{\texorpdfstring{ngps}{ngps}}
+{\footnotesize\ttfamily int IBM\+::gp\+Data\+\_\+t\+::ngps}
+
+\mbox{\Hypertarget{structIBM_1_1gpData__t_a5af70594cdc20425ceb635b422ed8b65}\label{structIBM_1_1gpData__t_a5af70594cdc20425ceb635b422ed8b65}} 
+\index{IBM::gpData\_t@{IBM::gpData\_t}!normal@{normal}}
+\index{normal@{normal}!IBM::gpData\_t@{IBM::gpData\_t}}
+\doxysubsubsection{\texorpdfstring{normal}{normal}}
+{\footnotesize\ttfamily Gpu\+::\+Managed\+Vector$<$Array1D$<$Real,0,AMREX\+\_\+\+SPACEDIM-\/1$>$ $>$ IBM\+::gp\+Data\+\_\+t\+::normal}
+
+\mbox{\Hypertarget{structIBM_1_1gpData__t_a096723e1270e4fc1d292567e9f56dd77}\label{structIBM_1_1gpData__t_a096723e1270e4fc1d292567e9f56dd77}} 
+\index{IBM::gpData\_t@{IBM::gpData\_t}!tangent1@{tangent1}}
+\index{tangent1@{tangent1}!IBM::gpData\_t@{IBM::gpData\_t}}
+\doxysubsubsection{\texorpdfstring{tangent1}{tangent1}}
+{\footnotesize\ttfamily Gpu\+::\+Managed\+Vector$<$Array1D$<$Real,0,AMREX\+\_\+\+SPACEDIM-\/1$>$ $>$ IBM\+::gp\+Data\+\_\+t\+::tangent1}
+
+\mbox{\Hypertarget{structIBM_1_1gpData__t_a1fc9c2eddcfe6eb77598be3878e97fc5}\label{structIBM_1_1gpData__t_a1fc9c2eddcfe6eb77598be3878e97fc5}} 
+\index{IBM::gpData\_t@{IBM::gpData\_t}!tangent2@{tangent2}}
+\index{tangent2@{tangent2}!IBM::gpData\_t@{IBM::gpData\_t}}
+\doxysubsubsection{\texorpdfstring{tangent2}{tangent2}}
+{\footnotesize\ttfamily Gpu\+::\+Managed\+Vector$<$Array1D$<$Real,0,AMREX\+\_\+\+SPACEDIM-\/1$>$ $>$ IBM\+::gp\+Data\+\_\+t\+::tangent2}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/media/monal/main/code/amrsolver1/src/ibm/\mbox{\hyperlink{IBM_8h}{IBM.\+h}}\end{DoxyCompactItemize}

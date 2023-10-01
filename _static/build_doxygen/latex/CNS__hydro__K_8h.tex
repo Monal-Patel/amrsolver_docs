@@ -1,0 +1,80 @@
+\hypertarget{CNS__hydro__K_8h}{}\doxysection{/media/monal/main/code/amrsolver1/src/rhs/\+CNS\+\_\+hydro\+\_\+K.h File Reference}
+\label{CNS__hydro__K_8h}\index{/media/monal/main/code/amrsolver1/src/rhs/CNS\_hydro\_K.h@{/media/monal/main/code/amrsolver1/src/rhs/CNS\_hydro\_K.h}}
+{\ttfamily \#include $<$AMRe\+X\+\_\+\+FArray\+Box.\+H$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+Include dependency graph for CNS\+\_\+hydro\+\_\+\+K.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{CNS__hydro__K_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{CNS__hydro__K_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{CNS__hydro__K_8h_a589895e8d6d71b582eaabf7078b1f0ba}{cons2prim}} (int i, int j, int k, const Array4$<$ const Real $>$ \&u, Array4$<$ Real $>$ const \&q, const PROB\+::\+Prob\+Closures \&closures) noexcept
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE Real \mbox{\hyperlink{CNS__hydro__K_8h_a9bb4233e9020a577b19287d4e315db5d}{discon\+Sensor}} (Real pp, Real pl, Real pr)
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{CNS__hydro__K_8h_a7d62746cca95b041a15a59b4bd0aa1b5}{Compute\+Sensor\+Lambda}} (int i, int j, int k, const auto \&prims, const auto \&lambda, const auto \&sen, const PROB\+::\+Prob\+Closures \&closures)
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{CNS__hydro__K_8h_aa79cf86fb3c3e39788dbd6a9b2fb9a8b}{JSTflux}} (int i, int j, int k, int n, const auto \&lambda, const auto \&sensor, const auto \&cons, const auto \&nfabfx, const auto \&nfabfy, const auto \&nfabfz, const PROB\+::\+Prob\+Closures \&closures)
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{CNS__hydro__K_8h_aed303ecaf80625bb74aa6a6c087c2d41}{viscfluxes}} (int i, int j, int k, auto const \&prims, auto const \&fx, auto const \&fy, auto const \&fz, Gpu\+Array$<$ Real, AMREX\+\_\+\+SPACEDIM $>$ const \&dxinv, PROB\+::\+Prob\+Closures const \&closures) noexcept
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{CNS__hydro__K_8h_a2b287c68b9c3f57371b1870c98fab63f}{viscfluxes\+\_\+wall}} (int i, int j, int k, int loc, auto const \&prims, auto const \&fx, auto const \&fy, auto const \&fz, Gpu\+Array$<$ Real, AMREX\+\_\+\+SPACEDIM $>$ const \&dxinv, PROB\+::\+Prob\+Closures const \&closures) noexcept
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{CNS__hydro__K_8h_ae1f8e252372e86159c239c6b5d1e0cb9}{visc\+\_\+numericalfluxes}} (int i, int j, int k, int n, const auto \&pfx, const auto \&pfy, const auto \&pfz, const auto \&nfx, const auto \&nfy, const auto \&nfz)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{CNS__hydro__K_8h_a7d62746cca95b041a15a59b4bd0aa1b5}\label{CNS__hydro__K_8h_a7d62746cca95b041a15a59b4bd0aa1b5}} 
+\index{CNS\_hydro\_K.h@{CNS\_hydro\_K.h}!ComputeSensorLambda@{ComputeSensorLambda}}
+\index{ComputeSensorLambda@{ComputeSensorLambda}!CNS\_hydro\_K.h@{CNS\_hydro\_K.h}}
+\doxysubsubsection{\texorpdfstring{ComputeSensorLambda()}{ComputeSensorLambda()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void Compute\+Sensor\+Lambda (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{k,  }\item[{const auto \&}]{prims,  }\item[{const auto \&}]{lambda,  }\item[{const auto \&}]{sen,  }\item[{const PROB\+::\+Prob\+Closures \&}]{closures }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{CNS__hydro__K_8h_a589895e8d6d71b582eaabf7078b1f0ba}\label{CNS__hydro__K_8h_a589895e8d6d71b582eaabf7078b1f0ba}} 
+\index{CNS\_hydro\_K.h@{CNS\_hydro\_K.h}!cons2prim@{cons2prim}}
+\index{cons2prim@{cons2prim}!CNS\_hydro\_K.h@{CNS\_hydro\_K.h}}
+\doxysubsubsection{\texorpdfstring{cons2prim()}{cons2prim()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void cons2prim (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{k,  }\item[{const Array4$<$ const Real $>$ \&}]{u,  }\item[{Array4$<$ Real $>$ const \&}]{q,  }\item[{const PROB\+::\+Prob\+Closures \&}]{closures }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{CNS__hydro__K_8h_a9bb4233e9020a577b19287d4e315db5d}\label{CNS__hydro__K_8h_a9bb4233e9020a577b19287d4e315db5d}} 
+\index{CNS\_hydro\_K.h@{CNS\_hydro\_K.h}!disconSensor@{disconSensor}}
+\index{disconSensor@{disconSensor}!CNS\_hydro\_K.h@{CNS\_hydro\_K.h}}
+\doxysubsubsection{\texorpdfstring{disconSensor()}{disconSensor()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE Real discon\+Sensor (\begin{DoxyParamCaption}\item[{Real}]{pp,  }\item[{Real}]{pl,  }\item[{Real}]{pr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{CNS__hydro__K_8h_aa79cf86fb3c3e39788dbd6a9b2fb9a8b}\label{CNS__hydro__K_8h_aa79cf86fb3c3e39788dbd6a9b2fb9a8b}} 
+\index{CNS\_hydro\_K.h@{CNS\_hydro\_K.h}!JSTflux@{JSTflux}}
+\index{JSTflux@{JSTflux}!CNS\_hydro\_K.h@{CNS\_hydro\_K.h}}
+\doxysubsubsection{\texorpdfstring{JSTflux()}{JSTflux()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void JSTflux (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{k,  }\item[{int}]{n,  }\item[{const auto \&}]{lambda,  }\item[{const auto \&}]{sensor,  }\item[{const auto \&}]{cons,  }\item[{const auto \&}]{nfabfx,  }\item[{const auto \&}]{nfabfy,  }\item[{const auto \&}]{nfabfz,  }\item[{const PROB\+::\+Prob\+Closures \&}]{closures }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{CNS__hydro__K_8h_ae1f8e252372e86159c239c6b5d1e0cb9}\label{CNS__hydro__K_8h_ae1f8e252372e86159c239c6b5d1e0cb9}} 
+\index{CNS\_hydro\_K.h@{CNS\_hydro\_K.h}!visc\_numericalfluxes@{visc\_numericalfluxes}}
+\index{visc\_numericalfluxes@{visc\_numericalfluxes}!CNS\_hydro\_K.h@{CNS\_hydro\_K.h}}
+\doxysubsubsection{\texorpdfstring{visc\_numericalfluxes()}{visc\_numericalfluxes()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void visc\+\_\+numericalfluxes (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{k,  }\item[{int}]{n,  }\item[{const auto \&}]{pfx,  }\item[{const auto \&}]{pfy,  }\item[{const auto \&}]{pfz,  }\item[{const auto \&}]{nfx,  }\item[{const auto \&}]{nfy,  }\item[{const auto \&}]{nfz }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{CNS__hydro__K_8h_aed303ecaf80625bb74aa6a6c087c2d41}\label{CNS__hydro__K_8h_aed303ecaf80625bb74aa6a6c087c2d41}} 
+\index{CNS\_hydro\_K.h@{CNS\_hydro\_K.h}!viscfluxes@{viscfluxes}}
+\index{viscfluxes@{viscfluxes}!CNS\_hydro\_K.h@{CNS\_hydro\_K.h}}
+\doxysubsubsection{\texorpdfstring{viscfluxes()}{viscfluxes()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void viscfluxes (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{k,  }\item[{auto const \&}]{prims,  }\item[{auto const \&}]{fx,  }\item[{auto const \&}]{fy,  }\item[{auto const \&}]{fz,  }\item[{Gpu\+Array$<$ Real, AMREX\+\_\+\+SPACEDIM $>$ const \&}]{dxinv,  }\item[{PROB\+::\+Prob\+Closures const \&}]{closures }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{CNS__hydro__K_8h_a2b287c68b9c3f57371b1870c98fab63f}\label{CNS__hydro__K_8h_a2b287c68b9c3f57371b1870c98fab63f}} 
+\index{CNS\_hydro\_K.h@{CNS\_hydro\_K.h}!viscfluxes\_wall@{viscfluxes\_wall}}
+\index{viscfluxes\_wall@{viscfluxes\_wall}!CNS\_hydro\_K.h@{CNS\_hydro\_K.h}}
+\doxysubsubsection{\texorpdfstring{viscfluxes\_wall()}{viscfluxes\_wall()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void viscfluxes\+\_\+wall (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{k,  }\item[{int}]{loc,  }\item[{auto const \&}]{prims,  }\item[{auto const \&}]{fx,  }\item[{auto const \&}]{fy,  }\item[{auto const \&}]{fz,  }\item[{Gpu\+Array$<$ Real, AMREX\+\_\+\+SPACEDIM $>$ const \&}]{dxinv,  }\item[{PROB\+::\+Prob\+Closures const \&}]{closures }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+

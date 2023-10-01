@@ -1,0 +1,95 @@
+\hypertarget{IBM_8h}{}\doxysection{/media/monal/main/code/amrsolver1/src/ibm/\+IBM.h File Reference}
+\label{IBM_8h}\index{/media/monal/main/code/amrsolver1/src/ibm/IBM.h@{/media/monal/main/code/amrsolver1/src/ibm/IBM.h}}
+{\ttfamily \#include $<$AMRe\+X\+\_\+\+Amr.\+H$>$}\newline
+{\ttfamily \#include $<$AMRe\+X\+\_\+\+Amr\+Level.\+H$>$}\newline
+{\ttfamily \#include $<$AMRe\+X\+\_\+\+Fab\+Array.\+H$>$}\newline
+{\ttfamily \#include $<$AMRe\+X\+\_\+\+Int\+Vect.\+H$>$}\newline
+{\ttfamily \#include $<$AMRe\+X\+\_\+\+Derive.\+H$>$}\newline
+{\ttfamily \#include $<$AMRe\+X\+\_\+\+State\+Descriptor.\+H$>$}\newline
+{\ttfamily \#include $<$AMRe\+X\+\_\+\+Gpu\+Containers.\+H$>$}\newline
+{\ttfamily \#include $<$cns\+\_\+prob.\+H$>$}\newline
+{\ttfamily \#include $<$CGAL/\+Exact\+\_\+predicates\+\_\+inexact\+\_\+constructions\+\_\+kernel.\+h$>$}\newline
+{\ttfamily \#include $<$CGAL/\+Polyhedron\+\_\+3.\+h$>$}\newline
+{\ttfamily \#include $<$CGAL/\+Polygon\+\_\+mesh\+\_\+processing/\+IO/polygon\+\_\+mesh\+\_\+io.\+h$>$}\newline
+{\ttfamily \#include $<$CGAL/\+Simple\+\_\+cartesian.\+h$>$}\newline
+{\ttfamily \#include $<$CGAL/\+AABB\+\_\+tree.\+h$>$}\newline
+{\ttfamily \#include $<$CGAL/\+AABB\+\_\+traits.\+h$>$}\newline
+{\ttfamily \#include $<$CGAL/\+AABB\+\_\+face\+\_\+graph\+\_\+triangle\+\_\+primitive.\+h$>$}\newline
+{\ttfamily \#include $<$CGAL/\+Polygon\+\_\+mesh\+\_\+processing/compute\+\_\+normal.\+h$>$}\newline
+{\ttfamily \#include $<$boost/property\+\_\+map/property\+\_\+map.\+hpp$>$}\newline
+Include dependency graph for IBM.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{IBM_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{IBM_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structIBM_1_1surfdata}{IBM\+::surfdata}}
+\item 
+struct \mbox{\hyperlink{structIBM_1_1gpData__t}{IBM\+::gp\+Data\+\_\+t}}
+\item 
+class \mbox{\hyperlink{classIBM_1_1IBFab}{IBM\+::\+IBFab}}
+\item 
+class \mbox{\hyperlink{classIBM_1_1IBMultiFab}{IBM\+::\+IBMulti\+Fab}}
+\item 
+class \mbox{\hyperlink{classIBM_1_1IB}{IBM\+::\+IB}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceIBM}{IBM}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{IBM_8h_aa3bb3b5f8fcd8b028b753db498e5c2ef}{NIMPS}}~2
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef CGAL\+::\+Simple\+\_\+cartesian$<$ Real $>$ \mbox{\hyperlink{namespaceIBM_a5c173780993440fb7c53b55b9d617904}{IBM\+::\+K2}}
+\item 
+typedef K2\+::\+Point\+\_\+3 \mbox{\hyperlink{namespaceIBM_ab004ecad26abd07304721f93b53c96d9}{IBM\+::\+Point}}
+\item 
+typedef CGAL\+::\+Polyhedron\+\_\+3$<$ K2 $>$ \mbox{\hyperlink{namespaceIBM_aef0e4eb6d237070846f13a40d2e90063}{IBM\+::\+Polyhedron}}
+\item 
+typedef K2\+::\+FT \mbox{\hyperlink{namespaceIBM_a2ddefb5d5000c4bfda7bea2d34f5e6c3}{IBM\+::\+FT}}
+\item 
+typedef K2\+::\+Segment\+\_\+3 \mbox{\hyperlink{namespaceIBM_a3bc0f9fb0e76244cb684d35d4cf0ac83}{IBM\+::\+Segment}}
+\item 
+typedef CGAL\+::\+AABB\+\_\+face\+\_\+graph\+\_\+triangle\+\_\+primitive$<$ Polyhedron $>$ \mbox{\hyperlink{namespaceIBM_af12ba22129ce6cc0a035cbc8c914cab5}{IBM\+::\+Primitive}}
+\item 
+typedef CGAL\+::\+AABB\+\_\+traits$<$ K2, Primitive $>$ \mbox{\hyperlink{namespaceIBM_a26dbd197d9ba9813a5c7aeb26f2282da}{IBM\+::\+Traits}}
+\item 
+typedef CGAL\+::\+AABB\+\_\+tree$<$ Traits $>$ \mbox{\hyperlink{namespaceIBM_ad9f4d764f206d71381e965523b58ace3}{IBM\+::\+Tree}}
+\item 
+typedef Tree\+::\+Point\+\_\+and\+\_\+primitive\+\_\+id \mbox{\hyperlink{namespaceIBM_a7ae8422f8b42c8d6e43ac05822de0904}{IBM\+::\+Point\+\_\+and\+\_\+primitive\+\_\+id}}
+\item 
+typedef K2\+::\+Vector\+\_\+3 \mbox{\hyperlink{namespaceIBM_a3ed74778d4b5bb4688ad8aa65f024af3}{IBM\+::\+Vector\+\_\+\+CGAL}}
+\item 
+typedef boost\+::graph\+\_\+traits$<$ Polyhedron $>$\+::face\+\_\+descriptor \mbox{\hyperlink{namespaceIBM_ad80af28e30018458d4c4c1efc0ba02d7}{IBM\+::face\+\_\+descriptor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+IB \mbox{\hyperlink{namespaceIBM_a4caba61add10b22958723fae113c891a}{IBM\+::ib}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{IBM_8h_aa3bb3b5f8fcd8b028b753db498e5c2ef}\label{IBM_8h_aa3bb3b5f8fcd8b028b753db498e5c2ef}} 
+\index{IBM.h@{IBM.h}!NIMPS@{NIMPS}}
+\index{NIMPS@{NIMPS}!IBM.h@{IBM.h}}
+\doxysubsubsection{\texorpdfstring{NIMPS}{NIMPS}}
+{\footnotesize\ttfamily \#define NIMPS~2}
+

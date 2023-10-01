@@ -1,0 +1,14 @@
+.. meta::53b8b33ee2f58d95cac0a4a55bc1d0e8650da92ff73eaf4ea8e9e2e16db1cb1b41dd2c97a7652da20aa67b8a9414a24f624e6400fece2438c4095bf6f396d8f7
+
+:orphan:
+
+.. title:: AMR solver: /media/monal/main/code/amrsolver1/src/ibm Directory Reference
+
+/media/monal/main/code/amrsolver1/src/ibm Directory Reference
+=============================================================
+
+.. container:: doxygen-content
+
+   
+   .. raw:: html
+     :file: dir_0526fc02dd5ee4981cd2ea727eb751a0.html
