@@ -11,7 +11,7 @@
     <class kind="class">visc_suth_t</class>
     <class kind="class">cond_const_t</class>
     <class kind="class">cond_suth_t</class>
-    <class kind="class">closures_derived_base_t</class>
+    <class kind="class">closures_derived_t</class>
   </compound>
   <compound kind="file">
     <name>CNS_K.h</name>
@@ -66,7 +66,7 @@
     <filename>CNS_8cpp.html</filename>
     <includes id="CNS_8h" name="CNS.h" local="no" imported="no">CNS.h</includes>
     <includes id="CNS__K_8h" name="CNS_K.h" local="no" imported="no">CNS_K.h</includes>
-    <includes id="Central_8h" name="Central.h" local="no" imported="no">Central.h</includes>
+    <includes id="CentralKEEP_8h" name="CentralKEEP.h" local="no" imported="no">CentralKEEP.h</includes>
   </compound>
   <compound kind="file">
     <name>CNS.h</name>
@@ -125,13 +125,6 @@
     <class kind="class">IBM::IBMultiFab</class>
     <class kind="class">IBM::IB</class>
     <namespace>IBM</namespace>
-    <member kind="define">
-      <type>#define</type>
-      <name>NIMPS</name>
-      <anchorfile>IBM_8h.html</anchorfile>
-      <anchor>aa3bb3b5f8fcd8b028b753db498e5c2ef</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
       <type>CGAL::Simple_cartesian&lt; Real &gt;</type>
       <name>K2</name>
@@ -209,6 +202,13 @@
       <anchor>ad80af28e30018458d4c4c1efc0ba02d7</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>CGAL::Side_of_triangle_mesh&lt; Polyhedron, K2 &gt;</type>
+      <name>inside_t</name>
+      <anchorfile>namespaceIBM.html</anchorfile>
+      <anchor>abc7199df80b955d2b33855e7382f4d8b</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="variable">
       <type>IB</type>
       <name>ib</name>
@@ -238,88 +238,99 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>Central.h</name>
+    <name>Advection.h</name>
     <path>/media/monal/main/code/amrsolver1/src/rhs/</path>
-    <filename>Central_8h.html</filename>
+    <filename>Advection_8h.html</filename>
+    <class kind="class">Advection</class>
+  </compound>
+  <compound kind="file">
+    <name>CentralKEEP.h</name>
+    <path>/media/monal/main/code/amrsolver1/src/rhs/</path>
+    <filename>CentralKEEP_8h.html</filename>
     <includes id="CNS_8h" name="CNS.h" local="no" imported="no">CNS.h</includes>
-    <namespace>Central</namespace>
+    <namespace>CentralKEEP</namespace>
     <member kind="function">
       <type>AMREX_GPU_DEVICE AMREX_FORCE_INLINE Real</type>
       <name>fDiv</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>a27bac29f02a2e92d3d1732918e5f1a17</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>ae953b30c463f9d7eaf144f1b09f19e86</anchor>
       <arglist>(Real f, Real fl)</arglist>
     </member>
     <member kind="function">
       <type>AMREX_GPU_DEVICE AMREX_FORCE_INLINE Real</type>
       <name>fgDiv</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>ab48a7271718a83ebaf1dd0f9a06a2ec4</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>ae061deca643c9b262b4de2a7badd32bb</anchor>
       <arglist>(Real f, Real fl, Real g, Real gl)</arglist>
     </member>
     <member kind="function">
       <type>AMREX_GPU_DEVICE AMREX_FORCE_INLINE Real</type>
       <name>fgQuad</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>a5caf526ff4ced258110809c05dc02980</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>aec5b13640a497b36c9bb76a5e3797721</anchor>
       <arglist>(Real f, Real fl, Real g, Real gl)</arglist>
     </member>
     <member kind="function">
       <type>AMREX_GPU_DEVICE AMREX_FORCE_INLINE Real</type>
       <name>fghCubic</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>aa4f0cdabb9a488ee98eecf87b2d15e48</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>a6b8cdc9184c5e5ea08187da5464737bd</anchor>
       <arglist>(Real f, Real fl, Real g, Real gl, Real h, Real hl)</arglist>
     </member>
     <member kind="function">
       <type>AMREX_GPU_DEVICE AMREX_FORCE_INLINE void</type>
       <name>KEEP</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>aa98cc21d0d4ab651d5652baed6a8df73</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>a2fb7ccc76076dde1ebbae4699f6a4c5f</anchor>
       <arglist>(int i, int j, int k, int halfsten, const GpuArray&lt; Real, 3 &gt; &amp;coeffs, const auto &amp;prims, const auto &amp;nfabfx, const auto &amp;nfabfy, const auto &amp;nfabfz, PROB::ProbClosures const &amp;closures)</arglist>
     </member>
     <member kind="function">
       <type>AMREX_GPU_DEVICE AMREX_FORCE_INLINE void</type>
       <name>KEEPy</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>ae86434930274dbb293c493e548df0b10</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>a361d8d139b3ed9b1a976d7e40f1a47f8</anchor>
       <arglist>(int i, int j, int k, int halfsten, const GpuArray&lt; Real, 3 &gt; coeffs, const auto &amp;prims, const auto &amp;nfabfy, PROB::ProbClosures const &amp;parm)</arglist>
     </member>
     <member kind="function">
       <type>AMREX_FORCE_INLINE void</type>
       <name>FluxKEEP</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>ae7d61d2691000730f9eb2076dc3822d8</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>ab654c0f6fdd202df7bfb635990de0bd4</anchor>
       <arglist>(MultiFab &amp;statemf, MultiFab &amp;primsmf, Array&lt; MultiFab, AMREX_SPACEDIM &gt; &amp;numflxmf)</arglist>
     </member>
     <member kind="function">
       <type>AMREX_FORCE_INLINE void</type>
       <name>Flux_2nd_Order_KEEP</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>aba6eac66fcbd76f5839675d51cf0e768</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>a1fe72f8d36b3e2527b53b2b48fa0e3d2</anchor>
       <arglist>(Geometry &amp;geom, MultiFab &amp;primsmf, Array&lt; MultiFab, AMREX_SPACEDIM &gt; &amp;numflxmf)</arglist>
     </member>
     <member kind="variable">
       <type>GpuArray&lt; Real, 3 &gt;</type>
       <name>coeffs</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>ab274198ba01d9100adbc4c53375ef08e</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>afd9feeadebe9ed1b9e675ce6c9f52446</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>GpuArray&lt; Real, 3 &gt;</type>
       <name>coeffs2</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>a7fd3d1dbb2b33e2e286ffa8494451ba5</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>a062dd2ca304a59490db9136c8947493a</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>order_keep</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>aad5387eb19e0e4ba846483e0cc062cb5</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>aae34eb1423fbae9b5476c98fec4ac1b0</anchor>
       <arglist></arglist>
     </member>
+  </compound>
+  <compound kind="file">
+    <name>CentralSkew.h</name>
+    <path>/media/monal/main/code/amrsolver1/src/rhs/</path>
+    <filename>CentralSkew_8h.html</filename>
   </compound>
   <compound kind="file">
     <name>CNS_hydro_K.h</name>
@@ -355,25 +366,37 @@
     </member>
     <member kind="function">
       <type>AMREX_GPU_DEVICE AMREX_FORCE_INLINE void</type>
-      <name>viscfluxes</name>
+      <name>ViscousFluxes</name>
       <anchorfile>CNS__hydro__K_8h.html</anchorfile>
-      <anchor>aed303ecaf80625bb74aa6a6c087c2d41</anchor>
+      <anchor>acad8bba19f088246aed91351f9134dab</anchor>
       <arglist>(int i, int j, int k, auto const &amp;prims, auto const &amp;fx, auto const &amp;fy, auto const &amp;fz, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv, PROB::ProbClosures const &amp;closures) noexcept</arglist>
     </member>
     <member kind="function">
       <type>AMREX_GPU_DEVICE AMREX_FORCE_INLINE void</type>
-      <name>viscfluxes_wall</name>
+      <name>ViscousWallFluxes</name>
       <anchorfile>CNS__hydro__K_8h.html</anchorfile>
-      <anchor>a2b287c68b9c3f57371b1870c98fab63f</anchor>
+      <anchor>ac8d8a7795bba13759aef96631dd83804</anchor>
       <arglist>(int i, int j, int k, int loc, auto const &amp;prims, auto const &amp;fx, auto const &amp;fy, auto const &amp;fz, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv, PROB::ProbClosures const &amp;closures) noexcept</arglist>
     </member>
     <member kind="function">
       <type>AMREX_GPU_DEVICE AMREX_FORCE_INLINE void</type>
-      <name>visc_numericalfluxes</name>
+      <name>ViscousNumericalFluxes</name>
       <anchorfile>CNS__hydro__K_8h.html</anchorfile>
-      <anchor>ae1f8e252372e86159c239c6b5d1e0cb9</anchor>
+      <anchor>ad161e92585b5e9669c33b02576782fce</anchor>
       <arglist>(int i, int j, int k, int n, const auto &amp;pfx, const auto &amp;pfy, const auto &amp;pfz, const auto &amp;nfx, const auto &amp;nfy, const auto &amp;nfz)</arglist>
     </member>
+    <member kind="function">
+      <type>AMREX_GPU_DEVICE AMREX_FORCE_INLINE void</type>
+      <name>ViscousFluxGP</name>
+      <anchorfile>CNS__hydro__K_8h.html</anchorfile>
+      <anchor>ae6e684436eaaa1317cdd02ed8d3740a9</anchor>
+      <arglist>(int i, int j, int k, const Array4&lt; bool &gt; &amp;markers, auto const &amp;prims, const auto &amp;fx, const auto &amp;fy, const auto &amp;fz, const GpuArray&lt; Real, AMREX_SPACEDIM &gt; &amp;dxinv, const PROB::ProbClosures &amp;closures)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>Diffusion.h</name>
+    <path>/media/monal/main/code/amrsolver1/src/rhs/</path>
+    <filename>Diffusion_8h.html</filename>
   </compound>
   <compound kind="file">
     <name>High_resolution.h</name>
@@ -495,15 +518,15 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>CNS_bcfill.cpp</name>
+    <name>bcs.cpp</name>
     <path>/media/monal/main/code/amrsolver1/src/set/</path>
-    <filename>CNS__bcfill_8cpp.html</filename>
+    <filename>bcs_8cpp.html</filename>
     <includes id="CNS_8h" name="CNS.h" local="no" imported="no">CNS.h</includes>
     <class kind="struct">CnsFillExtDir</class>
     <member kind="function">
       <type>void</type>
       <name>cns_bcfill</name>
-      <anchorfile>CNS__bcfill_8cpp.html</anchorfile>
+      <anchorfile>bcs_8cpp.html</anchorfile>
       <anchor>a2c7bfe733528958728a6d1f08075858e</anchor>
       <arglist>(Box const &amp;bx, FArrayBox &amp;data, const int dcomp, const int numcomp, Geometry const &amp;geom, const Real time, const Vector&lt; BCRec &gt; &amp;bcr, const int bcomp, const int scomp)</arglist>
     </member>
@@ -549,9 +572,13 @@
     <filename>CNS__advance_8cpp.html</filename>
     <includes id="CNS_8h" name="CNS.h" local="no" imported="no">CNS.h</includes>
     <includes id="CNS__hydro__K_8h" name="CNS_hydro_K.h" local="no" imported="no">CNS_hydro_K.h</includes>
-    <includes id="Central_8h" name="Central.h" local="no" imported="no">Central.h</includes>
+    <includes id="CentralKEEP_8h" name="CentralKEEP.h" local="no" imported="no">CentralKEEP.h</includes>
     <includes id="Riemann_8h" name="Riemann.h" local="no" imported="no">Riemann.h</includes>
     <includes id="High__resolution_8h" name="High_resolution.h" local="no" imported="no">High_resolution.h</includes>
+  </compound>
+  <compound kind="class">
+    <name>Advection</name>
+    <filename>classAdvection.html</filename>
   </compound>
   <compound kind="class">
     <name>calorifically_perfect_gas_t</name>
@@ -600,24 +627,23 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>closures_derived_base_t</name>
-    <filename>classclosures__derived__base__t.html</filename>
-    <templarg></templarg>
+    <name>closures_derived_t</name>
+    <filename>classclosures__derived__t.html</filename>
     <templarg></templarg>
     <templarg></templarg>
     <templarg></templarg>
     <member kind="variable">
       <type>Real</type>
       <name>Cshock</name>
-      <anchorfile>classclosures__derived__base__t.html</anchorfile>
-      <anchor>a3f2af9be481f44993cf16d6358a54e6d</anchor>
+      <anchorfile>classclosures__derived__t.html</anchorfile>
+      <anchor>a71c9933d658a22a8f942931eb48938b7</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>Real</type>
       <name>Cdamp</name>
-      <anchorfile>classclosures__derived__base__t.html</anchorfile>
-      <anchor>a4a9dfae5bab5822e021f4f053e08ef8d</anchor>
+      <anchorfile>classclosures__derived__t.html</anchorfile>
+      <anchor>a3709f83195ab21fd963585e0b018bfba</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -1240,13 +1266,6 @@
       <anchor>a2dcf566c5d9c84b871125e70fade28aa</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
-      <name>resize</name>
-      <anchorfile>structIBM_1_1gpData__t.html</anchorfile>
-      <anchor>a60be254d2dd72f7720c8d80683e456c4</anchor>
-      <arglist>(int n)</arglist>
-    </member>
     <member kind="variable">
       <type>int</type>
       <name>ngps</name>
@@ -1308,6 +1327,13 @@
       <name>disIM</name>
       <anchorfile>structIBM_1_1gpData__t.html</anchorfile>
       <anchor>a614060371c2f6b5bf7e023b126bb9de3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Gpu::ManagedVector&lt; int &gt;</type>
+      <name>geomIdx</name>
+      <anchorfile>structIBM_1_1gpData__t.html</anchorfile>
+      <anchor>ad3b4ad3640dbd8947d1426f1565682b0</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -1409,7 +1435,7 @@
       <type>void</type>
       <name>moveGeom</name>
       <anchorfile>classIBM_1_1IB.html</anchorfile>
-      <anchor>abfe99f9e4c4e3caf1b5c99d790561210</anchor>
+      <anchor>a0b195fdb35fffb20ce8c785b8e846ed5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
@@ -1455,6 +1481,13 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
+      <type>int</type>
+      <name>NGEOM</name>
+      <anchorfile>classIBM_1_1IB.html</anchorfile>
+      <anchor>a20332eaba81fc84bdad9ab6847e5055e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
       <type>Amr *</type>
       <name>pamr</name>
       <anchorfile>classIBM_1_1IB.html</anchorfile>
@@ -1490,31 +1523,31 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>Polyhedron</type>
-      <name>geom</name>
+      <type>Vector&lt; Polyhedron &gt;</type>
+      <name>VGeom</name>
       <anchorfile>classIBM_1_1IB.html</anchorfile>
-      <anchor>ae7f9f222de2e5fcdd5db0b17df39b63f</anchor>
+      <anchor>a0d8d0c5a1e56af1fd2a2ffaa06864737</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>Tree *</type>
-      <name>treePtr</name>
+      <type>Vector&lt; Tree * &gt;</type>
+      <name>VtreePtr</name>
       <anchorfile>classIBM_1_1IB.html</anchorfile>
-      <anchor>afae998704e6da3b34fd1c59f4074e672</anchor>
+      <anchor>ac97ab52f1cd6501b01af5f42bd675c6b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>std::map&lt; face_descriptor, Vector_CGAL &gt;</type>
-      <name>fnormals</name>
+      <type>Vector&lt; std::map&lt; face_descriptor, Vector_CGAL &gt; &gt;</type>
+      <name>Vfnormals</name>
       <anchorfile>classIBM_1_1IB.html</anchorfile>
-      <anchor>a471b16fe6a4073eb5463c2ac71846933</anchor>
+      <anchor>a5409aa3a70cf8323646bd2161dd481cf</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>std::map&lt; face_descriptor, surfdata &gt;</type>
-      <name>face2state</name>
+      <type>Vector&lt; inside_t * &gt;</type>
+      <name>VInOutFunc</name>
       <anchorfile>classIBM_1_1IB.html</anchorfile>
-      <anchor>af7344a130ff189614b58136411565c60</anchor>
+      <anchor>af4c6de2e2e91cf90ff24bf502088eccb</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -1607,8 +1640,8 @@
       <type>AMREX_GPU_DEVICE AMREX_FORCE_INLINE Real</type>
       <name>visc</name>
       <anchorfile>classvisc__const__t.html</anchorfile>
-      <anchor>ac3e16a51eaed2e1605ba08ee026ba18a</anchor>
-      <arglist>(Real &amp;T) const</arglist>
+      <anchor>afcbd7015c19dd2a03babd760eb39aef9</anchor>
+      <arglist>(const Real &amp;T) const</arglist>
     </member>
     <member kind="variable">
       <type>Real</type>
@@ -1625,88 +1658,88 @@
       <type>AMREX_GPU_DEVICE AMREX_FORCE_INLINE Real</type>
       <name>visc</name>
       <anchorfile>classvisc__suth__t.html</anchorfile>
-      <anchor>a42f123c9b177a4c17000f92112169c26</anchor>
-      <arglist>(Real &amp;T) const</arglist>
+      <anchor>a7ca62f6aa4db8aad2416f9c1190edd7e</anchor>
+      <arglist>(const Real &amp;T) const</arglist>
     </member>
   </compound>
   <compound kind="namespace">
-    <name>Central</name>
-    <filename>namespaceCentral.html</filename>
+    <name>CentralKEEP</name>
+    <filename>namespaceCentralKEEP.html</filename>
     <member kind="function">
       <type>AMREX_GPU_DEVICE AMREX_FORCE_INLINE Real</type>
       <name>fDiv</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>a27bac29f02a2e92d3d1732918e5f1a17</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>ae953b30c463f9d7eaf144f1b09f19e86</anchor>
       <arglist>(Real f, Real fl)</arglist>
     </member>
     <member kind="function">
       <type>AMREX_GPU_DEVICE AMREX_FORCE_INLINE Real</type>
       <name>fgDiv</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>ab48a7271718a83ebaf1dd0f9a06a2ec4</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>ae061deca643c9b262b4de2a7badd32bb</anchor>
       <arglist>(Real f, Real fl, Real g, Real gl)</arglist>
     </member>
     <member kind="function">
       <type>AMREX_GPU_DEVICE AMREX_FORCE_INLINE Real</type>
       <name>fgQuad</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>a5caf526ff4ced258110809c05dc02980</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>aec5b13640a497b36c9bb76a5e3797721</anchor>
       <arglist>(Real f, Real fl, Real g, Real gl)</arglist>
     </member>
     <member kind="function">
       <type>AMREX_GPU_DEVICE AMREX_FORCE_INLINE Real</type>
       <name>fghCubic</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>aa4f0cdabb9a488ee98eecf87b2d15e48</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>a6b8cdc9184c5e5ea08187da5464737bd</anchor>
       <arglist>(Real f, Real fl, Real g, Real gl, Real h, Real hl)</arglist>
     </member>
     <member kind="function">
       <type>AMREX_GPU_DEVICE AMREX_FORCE_INLINE void</type>
       <name>KEEP</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>aa98cc21d0d4ab651d5652baed6a8df73</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>a2fb7ccc76076dde1ebbae4699f6a4c5f</anchor>
       <arglist>(int i, int j, int k, int halfsten, const GpuArray&lt; Real, 3 &gt; &amp;coeffs, const auto &amp;prims, const auto &amp;nfabfx, const auto &amp;nfabfy, const auto &amp;nfabfz, PROB::ProbClosures const &amp;closures)</arglist>
     </member>
     <member kind="function">
       <type>AMREX_GPU_DEVICE AMREX_FORCE_INLINE void</type>
       <name>KEEPy</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>ae86434930274dbb293c493e548df0b10</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>a361d8d139b3ed9b1a976d7e40f1a47f8</anchor>
       <arglist>(int i, int j, int k, int halfsten, const GpuArray&lt; Real, 3 &gt; coeffs, const auto &amp;prims, const auto &amp;nfabfy, PROB::ProbClosures const &amp;parm)</arglist>
     </member>
     <member kind="function">
       <type>AMREX_FORCE_INLINE void</type>
       <name>FluxKEEP</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>ae7d61d2691000730f9eb2076dc3822d8</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>ab654c0f6fdd202df7bfb635990de0bd4</anchor>
       <arglist>(MultiFab &amp;statemf, MultiFab &amp;primsmf, Array&lt; MultiFab, AMREX_SPACEDIM &gt; &amp;numflxmf)</arglist>
     </member>
     <member kind="function">
       <type>AMREX_FORCE_INLINE void</type>
       <name>Flux_2nd_Order_KEEP</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>aba6eac66fcbd76f5839675d51cf0e768</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>a1fe72f8d36b3e2527b53b2b48fa0e3d2</anchor>
       <arglist>(Geometry &amp;geom, MultiFab &amp;primsmf, Array&lt; MultiFab, AMREX_SPACEDIM &gt; &amp;numflxmf)</arglist>
     </member>
     <member kind="variable">
       <type>GpuArray&lt; Real, 3 &gt;</type>
       <name>coeffs</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>ab274198ba01d9100adbc4c53375ef08e</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>afd9feeadebe9ed1b9e675ce6c9f52446</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>GpuArray&lt; Real, 3 &gt;</type>
       <name>coeffs2</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>a7fd3d1dbb2b33e2e286ffa8494451ba5</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>a062dd2ca304a59490db9136c8947493a</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>int</type>
       <name>order_keep</name>
-      <anchorfile>namespaceCentral.html</anchorfile>
-      <anchor>aad5387eb19e0e4ba846483e0cc062cb5</anchor>
+      <anchorfile>namespaceCentralKEEP.html</anchorfile>
+      <anchor>aae34eb1423fbae9b5476c98fec4ac1b0</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -1839,6 +1872,13 @@
       <name>face_descriptor</name>
       <anchorfile>namespaceIBM.html</anchorfile>
       <anchor>ad80af28e30018458d4c4c1efc0ba02d7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CGAL::Side_of_triangle_mesh&lt; Polyhedron, K2 &gt;</type>
+      <name>inside_t</name>
+      <anchorfile>namespaceIBM.html</anchorfile>
+      <anchor>abc7199df80b955d2b33855e7382f4d8b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">

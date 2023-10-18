@@ -75,12 +75,15 @@ Functions</h2></td></tr>
 <tr class="separator:a7d62746cca95b041a15a59b4bd0aa1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa79cf86fb3c3e39788dbd6a9b2fb9a8b"><td class="memItemLeft" align="right" valign="top">AMREX_GPU_DEVICE AMREX_FORCE_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CNS__hydro__K_8h.html#aa79cf86fb3c3e39788dbd6a9b2fb9a8b">JSTflux</a> (int i, int j, int k, int n, const auto &amp;lambda, const auto &amp;sensor, const auto &amp;cons, const auto &amp;nfabfx, const auto &amp;nfabfy, const auto &amp;nfabfz, const PROB::ProbClosures &amp;closures)</td></tr>
 <tr class="separator:aa79cf86fb3c3e39788dbd6a9b2fb9a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed303ecaf80625bb74aa6a6c087c2d41"><td class="memItemLeft" align="right" valign="top">AMREX_GPU_DEVICE AMREX_FORCE_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CNS__hydro__K_8h.html#aed303ecaf80625bb74aa6a6c087c2d41">viscfluxes</a> (int i, int j, int k, auto const &amp;prims, auto const &amp;fx, auto const &amp;fy, auto const &amp;fz, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv, PROB::ProbClosures const &amp;closures) noexcept</td></tr>
-<tr class="separator:aed303ecaf80625bb74aa6a6c087c2d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b287c68b9c3f57371b1870c98fab63f"><td class="memItemLeft" align="right" valign="top">AMREX_GPU_DEVICE AMREX_FORCE_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CNS__hydro__K_8h.html#a2b287c68b9c3f57371b1870c98fab63f">viscfluxes_wall</a> (int i, int j, int k, int loc, auto const &amp;prims, auto const &amp;fx, auto const &amp;fy, auto const &amp;fz, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv, PROB::ProbClosures const &amp;closures) noexcept</td></tr>
-<tr class="separator:a2b287c68b9c3f57371b1870c98fab63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1f8e252372e86159c239c6b5d1e0cb9"><td class="memItemLeft" align="right" valign="top">AMREX_GPU_DEVICE AMREX_FORCE_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CNS__hydro__K_8h.html#ae1f8e252372e86159c239c6b5d1e0cb9">visc_numericalfluxes</a> (int i, int j, int k, int n, const auto &amp;pfx, const auto &amp;pfy, const auto &amp;pfz, const auto &amp;nfx, const auto &amp;nfy, const auto &amp;nfz)</td></tr>
-<tr class="separator:ae1f8e252372e86159c239c6b5d1e0cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acad8bba19f088246aed91351f9134dab"><td class="memItemLeft" align="right" valign="top">AMREX_GPU_DEVICE AMREX_FORCE_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CNS__hydro__K_8h.html#acad8bba19f088246aed91351f9134dab">ViscousFluxes</a> (int i, int j, int k, auto const &amp;prims, auto const &amp;fx, auto const &amp;fy, auto const &amp;fz, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv, PROB::ProbClosures const &amp;closures) noexcept</td></tr>
+<tr class="separator:acad8bba19f088246aed91351f9134dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8d8a7795bba13759aef96631dd83804"><td class="memItemLeft" align="right" valign="top">AMREX_GPU_DEVICE AMREX_FORCE_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CNS__hydro__K_8h.html#ac8d8a7795bba13759aef96631dd83804">ViscousWallFluxes</a> (int i, int j, int k, int loc, auto const &amp;prims, auto const &amp;fx, auto const &amp;fy, auto const &amp;fz, GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;dxinv, PROB::ProbClosures const &amp;closures) noexcept</td></tr>
+<tr class="separator:ac8d8a7795bba13759aef96631dd83804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad161e92585b5e9669c33b02576782fce"><td class="memItemLeft" align="right" valign="top">AMREX_GPU_DEVICE AMREX_FORCE_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CNS__hydro__K_8h.html#ad161e92585b5e9669c33b02576782fce">ViscousNumericalFluxes</a> (int i, int j, int k, int n, const auto &amp;pfx, const auto &amp;pfy, const auto &amp;pfz, const auto &amp;nfx, const auto &amp;nfy, const auto &amp;nfz)</td></tr>
+<tr class="separator:ad161e92585b5e9669c33b02576782fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6e684436eaaa1317cdd02ed8d3740a9"><td class="memItemLeft" align="right" valign="top">AMREX_GPU_DEVICE AMREX_FORCE_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CNS__hydro__K_8h.html#ae6e684436eaaa1317cdd02ed8d3740a9">ViscousFluxGP</a> (int i, int j, int k, const Array4&lt; bool &gt; &amp;markers, auto const &amp;prims, const auto &amp;fx, const auto &amp;fy, const auto &amp;fz, const GpuArray&lt; Real, AMREX_SPACEDIM &gt; &amp;dxinv, const PROB::ProbClosures &amp;closures)</td></tr>
+<tr class="memdesc:ae6e684436eaaa1317cdd02ed8d3740a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Viscous fluxes at ghost point.  <a href="CNS__hydro__K_8h.html#ae6e684436eaaa1317cdd02ed8d3740a9">More...</a><br /></td></tr>
+<tr class="separator:ae6e684436eaaa1317cdd02ed8d3740a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a7d62746cca95b041a15a59b4bd0aa1b5"></a>
@@ -317,14 +320,183 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae1f8e252372e86159c239c6b5d1e0cb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1f8e252372e86159c239c6b5d1e0cb9">&#9670;&nbsp;</a></span>visc_numericalfluxes()</h2>
+<a id="acad8bba19f088246aed91351f9134dab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acad8bba19f088246aed91351f9134dab">&#9670;&nbsp;</a></span>ViscousFluxes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AMREX_GPU_DEVICE AMREX_FORCE_INLINE void ViscousFluxes </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">auto const &amp;&#160;</td>
+          <td class="paramname"><em>prims</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">auto const &amp;&#160;</td>
+          <td class="paramname"><em>fx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">auto const &amp;&#160;</td>
+          <td class="paramname"><em>fy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">auto const &amp;&#160;</td>
+          <td class="paramname"><em>fz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>dxinv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PROB::ProbClosures const &amp;&#160;</td>
+          <td class="paramname"><em>closures</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6e684436eaaa1317cdd02ed8d3740a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6e684436eaaa1317cdd02ed8d3740a9">&#9670;&nbsp;</a></span>ViscousFluxGP()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">AMREX_GPU_DEVICE AMREX_FORCE_INLINE void visc_numericalfluxes </td>
+          <td class="memname">AMREX_GPU_DEVICE AMREX_FORCE_INLINE void ViscousFluxGP </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Array4&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>markers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">auto const &amp;&#160;</td>
+          <td class="paramname"><em>prims</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const auto &amp;&#160;</td>
+          <td class="paramname"><em>fx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const auto &amp;&#160;</td>
+          <td class="paramname"><em>fy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const auto &amp;&#160;</td>
+          <td class="paramname"><em>fz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const GpuArray&lt; Real, AMREX_SPACEDIM &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dxinv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const PROB::ProbClosures &amp;&#160;</td>
+          <td class="paramname"><em>closures</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Viscous fluxes at ghost point. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>index </td></tr>
+    <tr><td class="paramname">markers</td><td>solid </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structCnsFillExtDir.html">CnsFillExtDir</a></dd></dl>
+<p>c1 = </p><div class="fragment"><div class="line">{rst}</div>
+<div class="line">Assuming the reconstructed state :math:`p^\text{th}`</div>
+<div class="line">order of accuracy <span class="keywordflow">for</span> the reconstructed state.</div>
+<div class="line"> </div>
+<div class="line">:math:`\frac{\partial f}{\partial x}\bigg|_i=`</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ad161e92585b5e9669c33b02576782fce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad161e92585b5e9669c33b02576782fce">&#9670;&nbsp;</a></span>ViscousNumericalFluxes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AMREX_GPU_DEVICE AMREX_FORCE_INLINE void ViscousNumericalFluxes </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>i</em>, </td>
@@ -393,8 +565,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aed303ecaf80625bb74aa6a6c087c2d41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed303ecaf80625bb74aa6a6c087c2d41">&#9670;&nbsp;</a></span>viscfluxes()</h2>
+<a id="ac8d8a7795bba13759aef96631dd83804"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8d8a7795bba13759aef96631dd83804">&#9670;&nbsp;</a></span>ViscousWallFluxes()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -403,85 +575,7 @@ Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">AMREX_GPU_DEVICE AMREX_FORCE_INLINE void viscfluxes </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>i</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>j</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>k</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">auto const &amp;&#160;</td>
-          <td class="paramname"><em>prims</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">auto const &amp;&#160;</td>
-          <td class="paramname"><em>fx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">auto const &amp;&#160;</td>
-          <td class="paramname"><em>fy</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">auto const &amp;&#160;</td>
-          <td class="paramname"><em>fz</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">GpuArray&lt; Real, AMREX_SPACEDIM &gt; const &amp;&#160;</td>
-          <td class="paramname"><em>dxinv</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">PROB::ProbClosures const &amp;&#160;</td>
-          <td class="paramname"><em>closures</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2b287c68b9c3f57371b1870c98fab63f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b287c68b9c3f57371b1870c98fab63f">&#9670;&nbsp;</a></span>viscfluxes_wall()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">AMREX_GPU_DEVICE AMREX_FORCE_INLINE void viscfluxes_wall </td>
+          <td class="memname">AMREX_GPU_DEVICE AMREX_FORCE_INLINE void ViscousWallFluxes </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>i</em>, </td>

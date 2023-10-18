@@ -25,7 +25,7 @@ void \mbox{\hyperlink{classIBM_1_1IB_ac0f484ffb8af42fd84c9385ee7d923cb}{initiali
 \item 
 void \mbox{\hyperlink{classIBM_1_1IB_aebb6f1ca76481dd7fc5e8423865e4d55}{compute\+GPs}} (int lev, Multi\+Fab \&consmf, Multi\+Fab \&primsmf, const PROB\+::\+Prob\+Closures \&closures)
 \item 
-void \mbox{\hyperlink{classIBM_1_1IB_abfe99f9e4c4e3caf1b5c99d790561210}{move\+Geom}} ()
+void \mbox{\hyperlink{classIBM_1_1IB_a0b195fdb35fffb20ce8c785b8e846ed5}{move\+Geom}} ()
 \item 
 void \mbox{\hyperlink{classIBM_1_1IB_a8a0cb7ce4071f9a551b848ff2bac8f2b}{compute\+Surf}} (int lev)
 \end{DoxyCompactItemize}
@@ -45,6 +45,8 @@ int \mbox{\hyperlink{classIBM_1_1IB_a8e53bbbdda28918c0bd9e36d1a583188}{NGHOST\+\
 \item 
 const int \mbox{\hyperlink{classIBM_1_1IB_a4c42acc282725731e0ede5c173a43b33}{NVAR\+\_\+\+IB}} = 2
 \item 
+int \mbox{\hyperlink{classIBM_1_1IB_a20332eaba81fc84bdad9ab6847e5055e}{NGEOM}} =1
+\item 
 Amr $\ast$ \mbox{\hyperlink{classIBM_1_1IB_a3ba2ac24f1f7ecd63d34353d2fb2e999}{pamr}}
 \item 
 Vector$<$ Int\+Vect $>$ \mbox{\hyperlink{classIBM_1_1IB_adb32acf0ce453f0e54b666d3fcaad2e0}{ref\+\_\+ratio}}
@@ -55,13 +57,13 @@ Vector$<$ \mbox{\hyperlink{classIBM_1_1IBMultiFab}{IBMulti\+Fab}} $\ast$ $>$ \mb
 \item 
 Vector$<$ Multi\+Fab $>$ \mbox{\hyperlink{classIBM_1_1IB_a85b4b2b8f08e3bbf0f43e121adbcb77a}{ls\+MFa}}
 \item 
-\mbox{\hyperlink{namespaceIBM_aef0e4eb6d237070846f13a40d2e90063}{Polyhedron}} \mbox{\hyperlink{classIBM_1_1IB_ae7f9f222de2e5fcdd5db0b17df39b63f}{geom}}
+Vector$<$ \mbox{\hyperlink{namespaceIBM_aef0e4eb6d237070846f13a40d2e90063}{Polyhedron}} $>$ \mbox{\hyperlink{classIBM_1_1IB_a0d8d0c5a1e56af1fd2a2ffaa06864737}{VGeom}}
 \item 
-\mbox{\hyperlink{namespaceIBM_ad9f4d764f206d71381e965523b58ace3}{Tree}} $\ast$ \mbox{\hyperlink{classIBM_1_1IB_afae998704e6da3b34fd1c59f4074e672}{tree\+Ptr}}
+Vector$<$ \mbox{\hyperlink{namespaceIBM_ad9f4d764f206d71381e965523b58ace3}{Tree}} $\ast$ $>$ \mbox{\hyperlink{classIBM_1_1IB_ac97ab52f1cd6501b01af5f42bd675c6b}{Vtree\+Ptr}}
 \item 
-std\+::map$<$ \mbox{\hyperlink{namespaceIBM_ad80af28e30018458d4c4c1efc0ba02d7}{face\+\_\+descriptor}}, \mbox{\hyperlink{namespaceIBM_a3ed74778d4b5bb4688ad8aa65f024af3}{Vector\+\_\+\+CGAL}} $>$ \mbox{\hyperlink{classIBM_1_1IB_a471b16fe6a4073eb5463c2ac71846933}{fnormals}}
+Vector$<$ std\+::map$<$ \mbox{\hyperlink{namespaceIBM_ad80af28e30018458d4c4c1efc0ba02d7}{face\+\_\+descriptor}}, \mbox{\hyperlink{namespaceIBM_a3ed74778d4b5bb4688ad8aa65f024af3}{Vector\+\_\+\+CGAL}} $>$ $>$ \mbox{\hyperlink{classIBM_1_1IB_a5409aa3a70cf8323646bd2161dd481cf}{Vfnormals}}
 \item 
-std\+::map$<$ \mbox{\hyperlink{namespaceIBM_ad80af28e30018458d4c4c1efc0ba02d7}{face\+\_\+descriptor}}, \mbox{\hyperlink{structIBM_1_1surfdata}{surfdata}} $>$ \mbox{\hyperlink{classIBM_1_1IB_af7344a130ff189614b58136411565c60}{face2state}}
+Vector$<$ \mbox{\hyperlink{namespaceIBM_abc7199df80b955d2b33855e7382f4d8b}{inside\+\_\+t}} $\ast$ $>$ \mbox{\hyperlink{classIBM_1_1IB_af4c6de2e2e91cf90ff24bf502088eccb}{VIn\+Out\+Func}}
 \end{DoxyCompactItemize}
 
 
@@ -129,11 +131,11 @@ std\+::map$<$ \mbox{\hyperlink{namespaceIBM_ad80af28e30018458d4c4c1efc0ba02d7}{f
 \doxysubsubsection{\texorpdfstring{initialiseGPs()}{initialiseGPs()}}
 {\footnotesize\ttfamily void IB\+::initialise\+GPs (\begin{DoxyParamCaption}\item[{int}]{lev }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{classIBM_1_1IB_abfe99f9e4c4e3caf1b5c99d790561210}\label{classIBM_1_1IB_abfe99f9e4c4e3caf1b5c99d790561210}} 
+\mbox{\Hypertarget{classIBM_1_1IB_a0b195fdb35fffb20ce8c785b8e846ed5}\label{classIBM_1_1IB_a0b195fdb35fffb20ce8c785b8e846ed5}} 
 \index{IBM::IB@{IBM::IB}!moveGeom@{moveGeom}}
 \index{moveGeom@{moveGeom}!IBM::IB@{IBM::IB}}
 \doxysubsubsection{\texorpdfstring{moveGeom()}{moveGeom()}}
-{\footnotesize\ttfamily void IB\+::move\+Geom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void IBM\+::\+IB\+::move\+Geom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{classIBM_1_1IB_a54fd5d0d5a8a9a229fc9ccd968fb6d5c}\label{classIBM_1_1IB_a54fd5d0d5a8a9a229fc9ccd968fb6d5c}} 
 \index{IBM::IB@{IBM::IB}!readGeom@{readGeom}}
@@ -156,24 +158,6 @@ std\+::map$<$ \mbox{\hyperlink{namespaceIBM_ad80af28e30018458d4c4c1efc0ba02d7}{f
 \doxysubsubsection{\texorpdfstring{disIM}{disIM}}
 {\footnotesize\ttfamily Vector$<$Real$>$ IBM\+::\+IB\+::dis\+IM}
 
-\mbox{\Hypertarget{classIBM_1_1IB_af7344a130ff189614b58136411565c60}\label{classIBM_1_1IB_af7344a130ff189614b58136411565c60}} 
-\index{IBM::IB@{IBM::IB}!face2state@{face2state}}
-\index{face2state@{face2state}!IBM::IB@{IBM::IB}}
-\doxysubsubsection{\texorpdfstring{face2state}{face2state}}
-{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{namespaceIBM_ad80af28e30018458d4c4c1efc0ba02d7}{face\+\_\+descriptor}},\mbox{\hyperlink{structIBM_1_1surfdata}{surfdata}}$>$ IBM\+::\+IB\+::face2state}
-
-\mbox{\Hypertarget{classIBM_1_1IB_a471b16fe6a4073eb5463c2ac71846933}\label{classIBM_1_1IB_a471b16fe6a4073eb5463c2ac71846933}} 
-\index{IBM::IB@{IBM::IB}!fnormals@{fnormals}}
-\index{fnormals@{fnormals}!IBM::IB@{IBM::IB}}
-\doxysubsubsection{\texorpdfstring{fnormals}{fnormals}}
-{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{namespaceIBM_ad80af28e30018458d4c4c1efc0ba02d7}{face\+\_\+descriptor}},\mbox{\hyperlink{namespaceIBM_a3ed74778d4b5bb4688ad8aa65f024af3}{Vector\+\_\+\+CGAL}}$>$ IBM\+::\+IB\+::fnormals}
-
-\mbox{\Hypertarget{classIBM_1_1IB_ae7f9f222de2e5fcdd5db0b17df39b63f}\label{classIBM_1_1IB_ae7f9f222de2e5fcdd5db0b17df39b63f}} 
-\index{IBM::IB@{IBM::IB}!geom@{geom}}
-\index{geom@{geom}!IBM::IB@{IBM::IB}}
-\doxysubsubsection{\texorpdfstring{geom}{geom}}
-{\footnotesize\ttfamily \mbox{\hyperlink{namespaceIBM_aef0e4eb6d237070846f13a40d2e90063}{Polyhedron}} IBM\+::\+IB\+::geom}
-
 \mbox{\Hypertarget{classIBM_1_1IB_a8ff615e4167cbecef6daee586831df7a}\label{classIBM_1_1IB_a8ff615e4167cbecef6daee586831df7a}} 
 \index{IBM::IB@{IBM::IB}!ibMFa@{ibMFa}}
 \index{ibMFa@{ibMFa}!IBM::IB@{IBM::IB}}
@@ -191,6 +175,12 @@ std\+::map$<$ \mbox{\hyperlink{namespaceIBM_ad80af28e30018458d4c4c1efc0ba02d7}{f
 \index{MAX\_LEVEL@{MAX\_LEVEL}!IBM::IB@{IBM::IB}}
 \doxysubsubsection{\texorpdfstring{MAX\_LEVEL}{MAX\_LEVEL}}
 {\footnotesize\ttfamily int IBM\+::\+IB\+::\+MAX\+\_\+\+LEVEL = 0}
+
+\mbox{\Hypertarget{classIBM_1_1IB_a20332eaba81fc84bdad9ab6847e5055e}\label{classIBM_1_1IB_a20332eaba81fc84bdad9ab6847e5055e}} 
+\index{IBM::IB@{IBM::IB}!NGEOM@{NGEOM}}
+\index{NGEOM@{NGEOM}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{NGEOM}{NGEOM}}
+{\footnotesize\ttfamily int IBM\+::\+IB\+::\+NGEOM =1}
 
 \mbox{\Hypertarget{classIBM_1_1IB_a8e53bbbdda28918c0bd9e36d1a583188}\label{classIBM_1_1IB_a8e53bbbdda28918c0bd9e36d1a583188}} 
 \index{IBM::IB@{IBM::IB}!NGHOST\_IB@{NGHOST\_IB}}
@@ -216,11 +206,29 @@ std\+::map$<$ \mbox{\hyperlink{namespaceIBM_ad80af28e30018458d4c4c1efc0ba02d7}{f
 \doxysubsubsection{\texorpdfstring{ref\_ratio}{ref\_ratio}}
 {\footnotesize\ttfamily Vector$<$Int\+Vect$>$ IBM\+::\+IB\+::ref\+\_\+ratio}
 
-\mbox{\Hypertarget{classIBM_1_1IB_afae998704e6da3b34fd1c59f4074e672}\label{classIBM_1_1IB_afae998704e6da3b34fd1c59f4074e672}} 
-\index{IBM::IB@{IBM::IB}!treePtr@{treePtr}}
-\index{treePtr@{treePtr}!IBM::IB@{IBM::IB}}
-\doxysubsubsection{\texorpdfstring{treePtr}{treePtr}}
-{\footnotesize\ttfamily \mbox{\hyperlink{namespaceIBM_ad9f4d764f206d71381e965523b58ace3}{Tree}}$\ast$ IBM\+::\+IB\+::tree\+Ptr}
+\mbox{\Hypertarget{classIBM_1_1IB_a5409aa3a70cf8323646bd2161dd481cf}\label{classIBM_1_1IB_a5409aa3a70cf8323646bd2161dd481cf}} 
+\index{IBM::IB@{IBM::IB}!Vfnormals@{Vfnormals}}
+\index{Vfnormals@{Vfnormals}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{Vfnormals}{Vfnormals}}
+{\footnotesize\ttfamily Vector$<$std\+::map$<$\mbox{\hyperlink{namespaceIBM_ad80af28e30018458d4c4c1efc0ba02d7}{face\+\_\+descriptor}},\mbox{\hyperlink{namespaceIBM_a3ed74778d4b5bb4688ad8aa65f024af3}{Vector\+\_\+\+CGAL}}$>$ $>$ IBM\+::\+IB\+::\+Vfnormals}
+
+\mbox{\Hypertarget{classIBM_1_1IB_a0d8d0c5a1e56af1fd2a2ffaa06864737}\label{classIBM_1_1IB_a0d8d0c5a1e56af1fd2a2ffaa06864737}} 
+\index{IBM::IB@{IBM::IB}!VGeom@{VGeom}}
+\index{VGeom@{VGeom}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{VGeom}{VGeom}}
+{\footnotesize\ttfamily Vector$<$\mbox{\hyperlink{namespaceIBM_aef0e4eb6d237070846f13a40d2e90063}{Polyhedron}}$>$ IBM\+::\+IB\+::\+VGeom}
+
+\mbox{\Hypertarget{classIBM_1_1IB_af4c6de2e2e91cf90ff24bf502088eccb}\label{classIBM_1_1IB_af4c6de2e2e91cf90ff24bf502088eccb}} 
+\index{IBM::IB@{IBM::IB}!VInOutFunc@{VInOutFunc}}
+\index{VInOutFunc@{VInOutFunc}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{VInOutFunc}{VInOutFunc}}
+{\footnotesize\ttfamily Vector$<$\mbox{\hyperlink{namespaceIBM_abc7199df80b955d2b33855e7382f4d8b}{inside\+\_\+t}}$\ast$$>$ IBM\+::\+IB\+::\+VIn\+Out\+Func}
+
+\mbox{\Hypertarget{classIBM_1_1IB_ac97ab52f1cd6501b01af5f42bd675c6b}\label{classIBM_1_1IB_ac97ab52f1cd6501b01af5f42bd675c6b}} 
+\index{IBM::IB@{IBM::IB}!VtreePtr@{VtreePtr}}
+\index{VtreePtr@{VtreePtr}!IBM::IB@{IBM::IB}}
+\doxysubsubsection{\texorpdfstring{VtreePtr}{VtreePtr}}
+{\footnotesize\ttfamily Vector$<$\mbox{\hyperlink{namespaceIBM_ad9f4d764f206d71381e965523b58ace3}{Tree}}$\ast$$>$ IBM\+::\+IB\+::\+Vtree\+Ptr}
 
 
 

@@ -16,7 +16,6 @@ File Members
       Functions <globals_func>
       Variables <globals_vars>
       Typedefs <globals_type>
-      Macros <globals_defs>
 
    .. raw:: html
 

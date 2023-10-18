@@ -7,7 +7,7 @@
 {\ttfamily \#include $<$AMRe\+X\+\_\+\+Derive.\+H$>$}\newline
 {\ttfamily \#include $<$AMRe\+X\+\_\+\+State\+Descriptor.\+H$>$}\newline
 {\ttfamily \#include $<$AMRe\+X\+\_\+\+Gpu\+Containers.\+H$>$}\newline
-{\ttfamily \#include $<$cns\+\_\+prob.\+H$>$}\newline
+{\ttfamily \#include $<$prob.\+h$>$}\newline
 {\ttfamily \#include $<$CGAL/\+Exact\+\_\+predicates\+\_\+inexact\+\_\+constructions\+\_\+kernel.\+h$>$}\newline
 {\ttfamily \#include $<$CGAL/\+Polyhedron\+\_\+3.\+h$>$}\newline
 {\ttfamily \#include $<$CGAL/\+Polygon\+\_\+mesh\+\_\+processing/\+IO/polygon\+\_\+mesh\+\_\+io.\+h$>$}\newline
@@ -17,6 +17,7 @@
 {\ttfamily \#include $<$CGAL/\+AABB\+\_\+face\+\_\+graph\+\_\+triangle\+\_\+primitive.\+h$>$}\newline
 {\ttfamily \#include $<$CGAL/\+Polygon\+\_\+mesh\+\_\+processing/compute\+\_\+normal.\+h$>$}\newline
 {\ttfamily \#include $<$boost/property\+\_\+map/property\+\_\+map.\+hpp$>$}\newline
+{\ttfamily \#include $<$CGAL/\+Side\+\_\+of\+\_\+triangle\+\_\+mesh.\+h$>$}\newline
 Include dependency graph for IBM.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -49,11 +50,6 @@ class \mbox{\hyperlink{classIBM_1_1IB}{IBM\+::\+IB}}
 \item 
  \mbox{\hyperlink{namespaceIBM}{IBM}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\#define \mbox{\hyperlink{IBM_8h_aa3bb3b5f8fcd8b028b753db498e5c2ef}{NIMPS}}~2
-\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
@@ -78,18 +74,11 @@ typedef Tree\+::\+Point\+\_\+and\+\_\+primitive\+\_\+id \mbox{\hyperlink{namespa
 typedef K2\+::\+Vector\+\_\+3 \mbox{\hyperlink{namespaceIBM_a3ed74778d4b5bb4688ad8aa65f024af3}{IBM\+::\+Vector\+\_\+\+CGAL}}
 \item 
 typedef boost\+::graph\+\_\+traits$<$ Polyhedron $>$\+::face\+\_\+descriptor \mbox{\hyperlink{namespaceIBM_ad80af28e30018458d4c4c1efc0ba02d7}{IBM\+::face\+\_\+descriptor}}
+\item 
+typedef CGAL\+::\+Side\+\_\+of\+\_\+triangle\+\_\+mesh$<$ Polyhedron, K2 $>$ \mbox{\hyperlink{namespaceIBM_abc7199df80b955d2b33855e7382f4d8b}{IBM\+::inside\+\_\+t}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 IB \mbox{\hyperlink{namespaceIBM_a4caba61add10b22958723fae113c891a}{IBM\+::ib}}
 \end{DoxyCompactItemize}
-
-
-\doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{IBM_8h_aa3bb3b5f8fcd8b028b753db498e5c2ef}\label{IBM_8h_aa3bb3b5f8fcd8b028b753db498e5c2ef}} 
-\index{IBM.h@{IBM.h}!NIMPS@{NIMPS}}
-\index{NIMPS@{NIMPS}!IBM.h@{IBM.h}}
-\doxysubsubsection{\texorpdfstring{NIMPS}{NIMPS}}
-{\footnotesize\ttfamily \#define NIMPS~2}
-

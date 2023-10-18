@@ -43,6 +43,7 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="index.html">AMR solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../IBM.html">IBM</a></li>
 </ul>
 
         </div>
@@ -121,7 +122,6 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -135,7 +135,7 @@ $(function() {
 <code>#include &lt;AMReX_Derive.H&gt;</code><br />
 <code>#include &lt;AMReX_StateDescriptor.H&gt;</code><br />
 <code>#include &lt;AMReX_GpuContainers.H&gt;</code><br />
-<code>#include &lt;cns_prob.H&gt;</code><br />
+<code>#include &lt;prob.h&gt;</code><br />
 <code>#include &lt;CGAL/Exact_predicates_inexact_constructions_kernel.h&gt;</code><br />
 <code>#include &lt;CGAL/Polyhedron_3.h&gt;</code><br />
 <code>#include &lt;CGAL/Polygon_mesh_processing/IO/polygon_mesh_io.h&gt;</code><br />
@@ -145,6 +145,7 @@ $(function() {
 <code>#include &lt;CGAL/AABB_face_graph_triangle_primitive.h&gt;</code><br />
 <code>#include &lt;CGAL/Polygon_mesh_processing/compute_normal.h&gt;</code><br />
 <code>#include &lt;boost/property_map/property_map.hpp&gt;</code><br />
+<code>#include &lt;CGAL/Side_of_triangle_mesh.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for IBM.h:</div>
 <div class="dyncontent">
@@ -176,11 +177,6 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespaceIBM"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceIBM.html">IBM</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:aa3bb3b5f8fcd8b028b753db498e5c2ef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="IBM_8h.html#aa3bb3b5f8fcd8b028b753db498e5c2ef">NIMPS</a>&#160;&#160;&#160;2</td></tr>
-<tr class="separator:aa3bb3b5f8fcd8b028b753db498e5c2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a5c173780993440fb7c53b55b9d617904"><td class="memItemLeft" align="right" valign="top">typedef CGAL::Simple_cartesian&lt; Real &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceIBM.html#a5c173780993440fb7c53b55b9d617904">IBM::K2</a></td></tr>
@@ -205,27 +201,14 @@ Typedefs</h2></td></tr>
 <tr class="separator:a3ed74778d4b5bb4688ad8aa65f024af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad80af28e30018458d4c4c1efc0ba02d7"><td class="memItemLeft" align="right" valign="top">typedef boost::graph_traits&lt; Polyhedron &gt;::face_descriptor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceIBM.html#ad80af28e30018458d4c4c1efc0ba02d7">IBM::face_descriptor</a></td></tr>
 <tr class="separator:ad80af28e30018458d4c4c1efc0ba02d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc7199df80b955d2b33855e7382f4d8b"><td class="memItemLeft" align="right" valign="top">typedef CGAL::Side_of_triangle_mesh&lt; Polyhedron, K2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceIBM.html#abc7199df80b955d2b33855e7382f4d8b">IBM::inside_t</a></td></tr>
+<tr class="separator:abc7199df80b955d2b33855e7382f4d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a4caba61add10b22958723fae113c891a"><td class="memItemLeft" align="right" valign="top">IB&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceIBM.html#a4caba61add10b22958723fae113c891a">IBM::ib</a></td></tr>
 <tr class="separator:a4caba61add10b22958723fae113c891a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="aa3bb3b5f8fcd8b028b753db498e5c2ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3bb3b5f8fcd8b028b753db498e5c2ef">&#9670;&nbsp;</a></span>NIMPS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define NIMPS&#160;&#160;&#160;2</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

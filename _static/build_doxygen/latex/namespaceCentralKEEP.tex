@@ -1,0 +1,102 @@
+\hypertarget{namespaceCentralKEEP}{}\doxysection{Central\+KEEP Namespace Reference}
+\label{namespaceCentralKEEP}\index{CentralKEEP@{CentralKEEP}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE Real \mbox{\hyperlink{namespaceCentralKEEP_ae953b30c463f9d7eaf144f1b09f19e86}{f\+Div}} (Real f, Real fl)
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE Real \mbox{\hyperlink{namespaceCentralKEEP_ae061deca643c9b262b4de2a7badd32bb}{fg\+Div}} (Real f, Real fl, Real g, Real gl)
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE Real \mbox{\hyperlink{namespaceCentralKEEP_aec5b13640a497b36c9bb76a5e3797721}{fg\+Quad}} (Real f, Real fl, Real g, Real gl)
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE Real \mbox{\hyperlink{namespaceCentralKEEP_a6b8cdc9184c5e5ea08187da5464737bd}{fgh\+Cubic}} (Real f, Real fl, Real g, Real gl, Real h, Real hl)
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceCentralKEEP_a2fb7ccc76076dde1ebbae4699f6a4c5f}{KEEP}} (int i, int j, int k, int halfsten, const Gpu\+Array$<$ Real, 3 $>$ \&\mbox{\hyperlink{namespaceCentralKEEP_afd9feeadebe9ed1b9e675ce6c9f52446}{coeffs}}, const auto \&prims, const auto \&nfabfx, const auto \&nfabfy, const auto \&nfabfz, PROB\+::\+Prob\+Closures const \&closures)
+\item 
+AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceCentralKEEP_a361d8d139b3ed9b1a976d7e40f1a47f8}{KEEPy}} (int i, int j, int k, int halfsten, const Gpu\+Array$<$ Real, 3 $>$ \mbox{\hyperlink{namespaceCentralKEEP_afd9feeadebe9ed1b9e675ce6c9f52446}{coeffs}}, const auto \&prims, const auto \&nfabfy, PROB\+::\+Prob\+Closures const \&parm)
+\item 
+AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceCentralKEEP_ab654c0f6fdd202df7bfb635990de0bd4}{Flux\+KEEP}} (Multi\+Fab \&statemf, Multi\+Fab \&primsmf, Array$<$ Multi\+Fab, AMREX\+\_\+\+SPACEDIM $>$ \&numflxmf)
+\item 
+AMREX\+\_\+\+FORCE\+\_\+\+INLINE void \mbox{\hyperlink{namespaceCentralKEEP_a1fe72f8d36b3e2527b53b2b48fa0e3d2}{Flux\+\_\+2nd\+\_\+\+Order\+\_\+\+KEEP}} (Geometry \&geom, Multi\+Fab \&primsmf, Array$<$ Multi\+Fab, AMREX\+\_\+\+SPACEDIM $>$ \&numflxmf)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Gpu\+Array$<$ Real, 3 $>$ \mbox{\hyperlink{namespaceCentralKEEP_afd9feeadebe9ed1b9e675ce6c9f52446}{coeffs}}
+\item 
+Gpu\+Array$<$ Real, 3 $>$ \mbox{\hyperlink{namespaceCentralKEEP_a062dd2ca304a59490db9136c8947493a}{coeffs2}}
+\item 
+int \mbox{\hyperlink{namespaceCentralKEEP_aae34eb1423fbae9b5476c98fec4ac1b0}{order\+\_\+keep}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceCentralKEEP_ae953b30c463f9d7eaf144f1b09f19e86}\label{namespaceCentralKEEP_ae953b30c463f9d7eaf144f1b09f19e86}} 
+\index{CentralKEEP@{CentralKEEP}!fDiv@{fDiv}}
+\index{fDiv@{fDiv}!CentralKEEP@{CentralKEEP}}
+\doxysubsubsection{\texorpdfstring{fDiv()}{fDiv()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE Real Central\+KEEP\+::f\+Div (\begin{DoxyParamCaption}\item[{Real}]{f,  }\item[{Real}]{fl }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceCentralKEEP_ae061deca643c9b262b4de2a7badd32bb}\label{namespaceCentralKEEP_ae061deca643c9b262b4de2a7badd32bb}} 
+\index{CentralKEEP@{CentralKEEP}!fgDiv@{fgDiv}}
+\index{fgDiv@{fgDiv}!CentralKEEP@{CentralKEEP}}
+\doxysubsubsection{\texorpdfstring{fgDiv()}{fgDiv()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE Real Central\+KEEP\+::fg\+Div (\begin{DoxyParamCaption}\item[{Real}]{f,  }\item[{Real}]{fl,  }\item[{Real}]{g,  }\item[{Real}]{gl }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceCentralKEEP_a6b8cdc9184c5e5ea08187da5464737bd}\label{namespaceCentralKEEP_a6b8cdc9184c5e5ea08187da5464737bd}} 
+\index{CentralKEEP@{CentralKEEP}!fghCubic@{fghCubic}}
+\index{fghCubic@{fghCubic}!CentralKEEP@{CentralKEEP}}
+\doxysubsubsection{\texorpdfstring{fghCubic()}{fghCubic()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE Real Central\+KEEP\+::fgh\+Cubic (\begin{DoxyParamCaption}\item[{Real}]{f,  }\item[{Real}]{fl,  }\item[{Real}]{g,  }\item[{Real}]{gl,  }\item[{Real}]{h,  }\item[{Real}]{hl }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceCentralKEEP_aec5b13640a497b36c9bb76a5e3797721}\label{namespaceCentralKEEP_aec5b13640a497b36c9bb76a5e3797721}} 
+\index{CentralKEEP@{CentralKEEP}!fgQuad@{fgQuad}}
+\index{fgQuad@{fgQuad}!CentralKEEP@{CentralKEEP}}
+\doxysubsubsection{\texorpdfstring{fgQuad()}{fgQuad()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE Real Central\+KEEP\+::fg\+Quad (\begin{DoxyParamCaption}\item[{Real}]{f,  }\item[{Real}]{fl,  }\item[{Real}]{g,  }\item[{Real}]{gl }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceCentralKEEP_a1fe72f8d36b3e2527b53b2b48fa0e3d2}\label{namespaceCentralKEEP_a1fe72f8d36b3e2527b53b2b48fa0e3d2}} 
+\index{CentralKEEP@{CentralKEEP}!Flux\_2nd\_Order\_KEEP@{Flux\_2nd\_Order\_KEEP}}
+\index{Flux\_2nd\_Order\_KEEP@{Flux\_2nd\_Order\_KEEP}!CentralKEEP@{CentralKEEP}}
+\doxysubsubsection{\texorpdfstring{Flux\_2nd\_Order\_KEEP()}{Flux\_2nd\_Order\_KEEP()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+FORCE\+\_\+\+INLINE void Central\+KEEP\+::\+Flux\+\_\+2nd\+\_\+\+Order\+\_\+\+KEEP (\begin{DoxyParamCaption}\item[{Geometry \&}]{geom,  }\item[{Multi\+Fab \&}]{primsmf,  }\item[{Array$<$ Multi\+Fab, AMREX\+\_\+\+SPACEDIM $>$ \&}]{numflxmf }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceCentralKEEP_ab654c0f6fdd202df7bfb635990de0bd4}\label{namespaceCentralKEEP_ab654c0f6fdd202df7bfb635990de0bd4}} 
+\index{CentralKEEP@{CentralKEEP}!FluxKEEP@{FluxKEEP}}
+\index{FluxKEEP@{FluxKEEP}!CentralKEEP@{CentralKEEP}}
+\doxysubsubsection{\texorpdfstring{FluxKEEP()}{FluxKEEP()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+FORCE\+\_\+\+INLINE void Central\+KEEP\+::\+Flux\+KEEP (\begin{DoxyParamCaption}\item[{Multi\+Fab \&}]{statemf,  }\item[{Multi\+Fab \&}]{primsmf,  }\item[{Array$<$ Multi\+Fab, AMREX\+\_\+\+SPACEDIM $>$ \&}]{numflxmf }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceCentralKEEP_a2fb7ccc76076dde1ebbae4699f6a4c5f}\label{namespaceCentralKEEP_a2fb7ccc76076dde1ebbae4699f6a4c5f}} 
+\index{CentralKEEP@{CentralKEEP}!KEEP@{KEEP}}
+\index{KEEP@{KEEP}!CentralKEEP@{CentralKEEP}}
+\doxysubsubsection{\texorpdfstring{KEEP()}{KEEP()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void Central\+KEEP\+::\+KEEP (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{k,  }\item[{int}]{halfsten,  }\item[{const Gpu\+Array$<$ Real, 3 $>$ \&}]{coeffs,  }\item[{const auto \&}]{prims,  }\item[{const auto \&}]{nfabfx,  }\item[{const auto \&}]{nfabfy,  }\item[{const auto \&}]{nfabfz,  }\item[{PROB\+::\+Prob\+Closures const \&}]{closures }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceCentralKEEP_a361d8d139b3ed9b1a976d7e40f1a47f8}\label{namespaceCentralKEEP_a361d8d139b3ed9b1a976d7e40f1a47f8}} 
+\index{CentralKEEP@{CentralKEEP}!KEEPy@{KEEPy}}
+\index{KEEPy@{KEEPy}!CentralKEEP@{CentralKEEP}}
+\doxysubsubsection{\texorpdfstring{KEEPy()}{KEEPy()}}
+{\footnotesize\ttfamily AMREX\+\_\+\+GPU\+\_\+\+DEVICE AMREX\+\_\+\+FORCE\+\_\+\+INLINE void Central\+KEEP\+::\+KEEPy (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{k,  }\item[{int}]{halfsten,  }\item[{const Gpu\+Array$<$ Real, 3 $>$}]{coeffs,  }\item[{const auto \&}]{prims,  }\item[{const auto \&}]{nfabfy,  }\item[{PROB\+::\+Prob\+Closures const \&}]{parm }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceCentralKEEP_afd9feeadebe9ed1b9e675ce6c9f52446}\label{namespaceCentralKEEP_afd9feeadebe9ed1b9e675ce6c9f52446}} 
+\index{CentralKEEP@{CentralKEEP}!coeffs@{coeffs}}
+\index{coeffs@{coeffs}!CentralKEEP@{CentralKEEP}}
+\doxysubsubsection{\texorpdfstring{coeffs}{coeffs}}
+{\footnotesize\ttfamily Gpu\+Array$<$ Real, 3 $>$ Central\+KEEP\+::coeffs\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{namespaceCentralKEEP_a062dd2ca304a59490db9136c8947493a}\label{namespaceCentralKEEP_a062dd2ca304a59490db9136c8947493a}} 
+\index{CentralKEEP@{CentralKEEP}!coeffs2@{coeffs2}}
+\index{coeffs2@{coeffs2}!CentralKEEP@{CentralKEEP}}
+\doxysubsubsection{\texorpdfstring{coeffs2}{coeffs2}}
+{\footnotesize\ttfamily Gpu\+Array$<$ Real, 3 $>$ Central\+KEEP\+::coeffs2\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{namespaceCentralKEEP_aae34eb1423fbae9b5476c98fec4ac1b0}\label{namespaceCentralKEEP_aae34eb1423fbae9b5476c98fec4ac1b0}} 
+\index{CentralKEEP@{CentralKEEP}!order\_keep@{order\_keep}}
+\index{order\_keep@{order\_keep}!CentralKEEP@{CentralKEEP}}
+\doxysubsubsection{\texorpdfstring{order\_keep}{order\_keep}}
+{\footnotesize\ttfamily int Central\+KEEP\+::order\+\_\+keep\hspace{0.3cm}{\ttfamily [extern]}}
+
